@@ -1679,15 +1679,54 @@ footer ul.fnav1 li{
   /* クリックを妨げない */
 }
 
-#contact .privacy-policy-cb .radio-custom {
-    width: 30px; /* チェックボックスと同じ幅 */
-    height: 30px; /* チェックボックスと同じ高さ */
-    border-radius: 50%; /* 円形にする */
+/* 標準のラジオボタンを隠す */
+input[type="radio"] {
+    position: absolute;
+    opacity: 0; /* 透明にして見えなくする */
+    pointer-events: none; /* クリックイベントを受け付けない */
+    width: 1px; /* 最小サイズ */
+    height: 1px; /* 最小サイズ */
+    overflow: hidden; /* はみ出しを隠す */
+    clip: rect(0, 0, 0, 0); /* 完全にクリップする */
+    white-space: nowrap; /* テキストの折り返しを防ぐ */
+}
+
+.radio-custom {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     background-color: #fff;
     border: 1px solid #707070;
     position: relative;
     display: inline-block;
-    pointer-events: none; /* クリックイベントを無効にする（label要素で操作するため） */
+    /* pointer-events: none; は不要。labelからのイベントでinputが切り替わるため */
+    vertical-align: middle; /* テキストと縦位置を合わせる */
+    margin-right: 5px; /* テキストとの間に少し隙間を空ける */
+}
+
+/* ラジオボタンが選択されたときのカスタムスタイリング */
+input[type="radio"]:checked + .radio-custom {
+    border-color: #007bff; /* 選択時のボーダー色 */
+    background-color: #007bff; /* 選択時の背景色 */
+}
+
+/* 内部のチェックマーク（ドット）を作成 */
+input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    display: block;
+    width: 16px; /* ドットのサイズ */
+    height: 16px; /* ドットのサイズ */
+    border-radius: 50%;
+    background: #fff; /* ドットの色 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 中央に配置 */
+}
+
+/* フォーカス時のスタイリング（アクセシビリティのため重要） */
+input[type="radio"]:focus + .radio-custom {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* フォーカスリング */
 }
 
 
