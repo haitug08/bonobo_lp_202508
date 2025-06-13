@@ -5924,3 +5924,15 @@ ul.intention-list li {
   width: 100%;
   height: auto;
 }
+
+
+.radio-custom {
+    width: 30px; /* チェックボックスと同じ幅 */
+    height: 30px; /* チェックボックスと同じ高さ */
+    border-radius: 50%; /* 円形にする */
+    background-color: #fff;
+    border: 1px solid #707070;
+    position: relative;
+    display: inline-block;
+    pointer-events: none; /* クリックイベントを無効にする（label要素で操作するため） */
+}
