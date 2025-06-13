@@ -1623,9 +1623,7 @@ footer ul.fnav1 li{
 /* 左寄せ用 */
 .pb-next-l {
   display: block;
-  margin-top: 50px;
-  margin-bottom: 190px;
-  margin-left: auto;
+  margin: 50px 190px;
   width: fit-content;
 }
 
@@ -1914,7 +1912,7 @@ st-plan {
   align-items: flex-end;
   font-weight: 500;
   font-size: 20px;
-  margin: 34px 0 45px 335px;
+  margin: auto;
 }
 
 #contact .total-amount-r {
