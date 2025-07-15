@@ -253,18 +253,18 @@ document.querySelectorAll("input[name='plan']").forEach((element) => {
   function getAmount(type, headcount, plan, term) {
     let amount = 0;
   
-if (type === 'personal') {
+if (type === 'personal' && headcount === 'personal') {
   if (plan === 'standard') {
     if (term === 'month') {
       amount = 10400;
-    } else {
+    } else if (term === 'year') { // termが'year'の場合を追加
       amount = 124800;
     }
-  } else if (plan === 'wide') { // wideプランの条件
+  } else if (plan === 'wide') {
     if (term === 'month') {
       amount = 18400;
-    } else {
-      amount = 220800; // ここを220800に修正しました
+    } else if (term === 'year') { // termが'year'の場合を追加
+      amount = 220800;
     }
   }
 }
