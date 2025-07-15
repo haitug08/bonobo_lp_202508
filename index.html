@@ -101,29 +101,43 @@
 <div class='contact-inner' id='contact'>
 <div class='contact-left'>
 <div class='form-title Required'>プランの選択</div>
-<table class='plan-table'>
-<tr>
-<th class='th-top'>申し込みプラン</th>
+<table class="plan-table">
+<tbody><tr>
+<th class="th-top">申し込みプラン</th>
 <td>
-<input value="スタンダード" autocomplete="off" type="hidden" name="plan" id="plan" />
-<div class='plan-btn'>スタンダードプラン</div>
-<div class='plan-wrap wi-323'>
-<div class='st-plan'>
-<div class='check-blue'>法務サービス</div>
-<div class='check-blue'>法律相談料の実額補償</div>
-<div class='check-blue'>着手金の実額補償</div>
-<div class='check-blue'>報酬金の実額補償</div>
-<div class='check-blue'>日当の実額補償</div>
+<div class="plan-wrap-02">
+<div class="lt-plan">
+<fieldset class="radio-4">
+<label><input checked="checked" name="plan" required="required" type="radio" value="スタンダード">スタンダード
+</label>
+<div class="plan-content">
+<div class="check-blue">法務サービス</div>
+<div class="check-blue">法律相談料の実額補償</div>
+<div class="check-blue">着手金の実額補償</div>
+<div class="check-blue">報酬金の実額補償</div>
+<div class="check-blue">日当の実額補償</div>
+</div>
+</fieldset>
+</div>
+<div class="st-plan">
+<fieldset class="radio-4">
+<label><input name="plan" type="radio" value="ワイド">ワイド
+</label>
+<div class="plan-content">
+<div class="check-blue">法務サービス</div>
+<div class="check-blue">法律相談料の実額補償</div>
+<div class="check-blue">着手金の実額補償</div>
+<div class="check-blue">報酬金の実額補償</div>
+<div class="check-blue">日当の実額補償</div>
+</div>
+</fieldset>
 </div>
 </div>
 </td>
 
 </tr>
-</table>
+</tbody></table>
 
-<p class="plan-note" style="color: black; margin-bottom: 50px; font-size: 14px;">
-※個人事業主および従業員10名未満の法人の場合、プランはスタンダードプランのみとなります。
-</p>
   
 <table class='plan-table'>
 <th class='th-top'>払込回数</th>
