@@ -219,7 +219,7 @@
 
   document.querySelectorAll("input[name='term']").forEach((element) => {
     element.addEventListener('change', (event) => {
-      if (event.target.value === '月払') { // 厳密な比較に修正
+      if (event.target.value === '月払') {
         term = 'month';
       } else {
         term = 'year';
@@ -230,7 +230,7 @@
 
   document.querySelectorAll("input[name='plan']").forEach((element) => {
     element.addEventListener('change', (event) => {
-      // ここで `let plan;` を削除し、グローバル変数 `plan` を更新するようにします
+      // plan変数を更新
       if (event.target.value === 'スタンダード') {
         plan = 'standard';
       } else if (event.target.value === 'ライト') {
@@ -239,8 +239,27 @@
         plan = 'wide';
       } else {
         console.warn('不明なプランが選択されました:', event.target.value);
-        plan = ''; // または適切なデフォルト値
+        plan = '';
       }
+
+      // --- ここからクラス切り替えのロジック ---
+      // すべての plan-content 内の check-blue を check-gray に変更
+      document.querySelectorAll('.plan-content .check-blue').forEach(item => {
+        item.classList.remove('check-blue');
+        item.classList.add('check-gray');
+      });
+
+      // 選択されたラジオボタンの親要素 (fieldset) を見つける
+      // その fieldset の中の .plan-content を見つけ、その中の .check-gray を .check-blue に変更
+      const selectedPlanContent = event.target.closest('fieldset.radio-4').querySelector('.plan-content');
+      if (selectedPlanContent) {
+        selectedPlanContent.querySelectorAll('.check-gray').forEach(item => {
+          item.classList.remove('check-gray');
+          item.classList.add('check-blue');
+        });
+      }
+      // --- クラス切り替えのロジックここまで ---
+
       updateAmountDisplay(); // 料金表示を更新する関数を呼び出す
     });
   });
@@ -251,13 +270,34 @@
     document.getElementById('amountRight').innerHTML = getAmount(contractType, headcount, plan, term);
   }
 
-  // ページロード時の初期表示
-  updateAmountDisplay(); // setDefaultAmount() の代わりにこちらを呼び出す
+  // ページロード時の初期表示と初期クラス設定
+  // 初期状態で「スタンダード」が選択されているため、その内容を青にする
+  function initializePlanDisplay() {
+    // まずすべての plan-content 内の check-blue を check-gray に変更
+    document.querySelectorAll('.plan-content .check-blue').forEach(item => {
+      item.classList.remove('check-blue');
+      item.classList.add('check-gray');
+    });
+
+    // 初期選択されている「スタンダード」の plan-content を見つけ、その中の .check-gray を .check-blue に変更
+    const defaultCheckedPlan = document.querySelector("input[name='plan'][checked='checked']");
+    if (defaultCheckedPlan) {
+      const defaultPlanContent = defaultCheckedPlan.closest('fieldset.radio-4').querySelector('.plan-content');
+      if (defaultPlanContent) {
+        defaultPlanContent.querySelectorAll('.check-gray').forEach(item => {
+          item.classList.remove('check-gray');
+          item.classList.add('check-blue');
+        });
+      }
+    }
+    updateAmountDisplay(); // 料金表示も初期化時に更新
+  }
+  
+  initializePlanDisplay(); // ページロード時に呼び出す
 
   function getAmount(type, headcount, plan, term) {
     let amount = 0;
 
-    // personal タイプと headcount === 'personal' の料金計算
     if (type === 'personal' && headcount === 'personal') {
       if (plan === 'standard') {
         if (term === 'month') {
@@ -272,62 +312,51 @@
           amount = 220800;
         }
       }
-      // light プランがpersonalタイプに存在しない場合は、
-      // ここに何も書かないか、デフォルト値を設定することができます
     }
 
-    // corporation タイプとその他 headcount の料金計算 (既存ロジックを維持)
-    if (type === 'corporation') { // 厳密な比較に修正
-      if (headcount === '100to300') { // 厳密な比較に修正
-        if (plan === 'standard') { // 厳密な比較に修正
-          if (term === 'month') { // 厳密な比較に修正
+    if (type === 'corporation') {
+      if (headcount === '100to300') {
+        if (plan === 'standard') {
+          if (term === 'month') {
             amount = 52700;
           } else {
             amount = 632400;
           }
         }
-
-        if (plan === 'light') { // 厳密な比較に修正
-          if (term === 'month') { // 厳密な比較に修正
+        if (plan === 'light') {
+          if (term === 'month') {
             amount = 25700;
           } else {
             amount = 308400;
           }
         }
-        // wide プランがcorporation/100to300に存在しない場合は、
-        // ここに何も書かないか、デフォルト値を設定することができます
       }
 
-      if (headcount === '10to100') { // 厳密な比較に修正
-        if (plan === 'standard') { // 厳密な比較に修正
-          if (term === 'month') { // 厳密な比較に修正
+      if (headcount === '10to100') {
+        if (plan === 'standard') {
+          if (term === 'month') {
             amount = 43400;
           } else {
             amount = 520800;
           }
         }
-
-        if (plan === 'light') { // 厳密な比較に修正
-          if (term === 'month') { // 厳密な比較に修正
+        if (plan === 'light') {
+          if (term === 'month') {
             amount = 21000;
           } else {
             amount = 252000;
           }
         }
-        // wide プランがcorporation/10to100に存在しない場合は、
-        // ここに何も書かないか、デフォルト値を設定することができます
       }
 
-      if (headcount === 'under10') { // 厳密な比較に修正
-        if (plan === 'standard') { // 厳密な比較に修正
-          if (term === 'month') { // 厳密な比較に修正
+      if (headcount === 'under10') {
+        if (plan === 'standard') {
+          if (term === 'month') {
             amount = 18400;
           } else {
             amount = 220800;
           }
         }
-        // light/wide プランがcorporation/under10に存在しない場合は、
-        // ここに何も書かないか、デフォルト値を設定することができます
       }
     }
 
