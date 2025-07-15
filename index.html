@@ -204,124 +204,131 @@
 </div>
 </div>
 </section>
-</form><script>
+</form>
+<script>
+  // グローバル変数として定義し、再宣言しない
   const contractType = "personal";
   const headcount = "personal";
   let term = "month";
-  let plan = "standard";
-  
+  let plan = "standard"; // このグローバル変数を更新するようにします
+
   document.querySelectorAll("input[name='term']").forEach((element) => {
     element.addEventListener('change', (event) => {
-      if (event.target.value == '月払') {
+      if (event.target.value === '月払') { // 厳密な比較に修正
         term = 'month';
       } else {
-        term = 'year';        
+        term = 'year';
       }
-  
-      document.getElementById('amountFooter').innerHTML = getAmount(contractType, headcount, plan, term);
-      document.getElementById('amountRight').innerHTML = getAmount(contractType, headcount, plan, term);
+      updateAmountDisplay(); // 料金表示を更新する関数を呼び出す
     });
   });
-  
-document.querySelectorAll("input[name='plan']").forEach((element) => {
-  element.addEventListener('change', (event) => {
-    let plan; // plan変数を宣言
-    if (event.target.value === 'スタンダード') {
-      plan = 'standard';
-    } else if (event.target.value === 'ライト') {
-      plan = 'light';
-    } else if (event.target.value === 'ワイド') {
-      plan = 'wide';
-    } else {
-      // 予期せぬ値の場合のデフォルト値やエラーハンドリングをここに記述することもできます
-      console.warn('不明なプランが選択されました:', event.target.value);
-      plan = ''; // または適切なデフォルト値
-    }
 
-    document.getElementById('amountFooter').innerHTML = getAmount(contractType, headcount, plan, term);
-    document.getElementById('amountRight').innerHTML = getAmount(contractType, headcount, plan, term);
+  document.querySelectorAll("input[name='plan']").forEach((element) => {
+    element.addEventListener('change', (event) => {
+      // ここで `let plan;` を削除し、グローバル変数 `plan` を更新するようにします
+      if (event.target.value === 'スタンダード') {
+        plan = 'standard';
+      } else if (event.target.value === 'ライト') {
+        plan = 'light';
+      } else if (event.target.value === 'ワイド') {
+        plan = 'wide';
+      } else {
+        console.warn('不明なプランが選択されました:', event.target.value);
+        plan = ''; // または適切なデフォルト値
+      }
+      updateAmountDisplay(); // 料金表示を更新する関数を呼び出す
+    });
   });
-});
-  
-  setDefaultAmount();
-  
-  function setDefaultAmount() {
+
+  // 料金表示を更新する共通関数
+  function updateAmountDisplay() {
     document.getElementById('amountFooter').innerHTML = getAmount(contractType, headcount, plan, term);
     document.getElementById('amountRight').innerHTML = getAmount(contractType, headcount, plan, term);
   }
-  
+
+  // ページロード時の初期表示
+  updateAmountDisplay(); // setDefaultAmount() の代わりにこちらを呼び出す
+
   function getAmount(type, headcount, plan, term) {
     let amount = 0;
-  
-if (type === 'personal' && headcount === 'personal') {
-  if (plan === 'standard') {
-    if (term === 'month') {
-      amount = 10400;
-    } else if (term === 'year') { // termが'year'の場合を追加
-      amount = 124800;
+
+    // personal タイプと headcount === 'personal' の料金計算
+    if (type === 'personal' && headcount === 'personal') {
+      if (plan === 'standard') {
+        if (term === 'month') {
+          amount = 10400;
+        } else if (term === 'year') {
+          amount = 124800;
+        }
+      } else if (plan === 'wide') {
+        if (term === 'month') {
+          amount = 18400;
+        } else if (term === 'year') {
+          amount = 220800;
+        }
+      }
+      // light プランがpersonalタイプに存在しない場合は、
+      // ここに何も書かないか、デフォルト値を設定することができます
     }
-  } else if (plan === 'wide') {
-    if (term === 'month') {
-      amount = 18400;
-    } else if (term === 'year') { // termが'year'の場合を追加
-      amount = 220800;
-    }
-  }
-}
-  
-    if (type == 'corporation') {
-      if (headcount == '100to300') {
-        if (plan == 'standard') {
-          if (term == 'month') {
+
+    // corporation タイプとその他 headcount の料金計算 (既存ロジックを維持)
+    if (type === 'corporation') { // 厳密な比較に修正
+      if (headcount === '100to300') { // 厳密な比較に修正
+        if (plan === 'standard') { // 厳密な比較に修正
+          if (term === 'month') { // 厳密な比較に修正
             amount = 52700;
           } else {
             amount = 632400;
           }
         }
-  
-        if (plan == 'light') {
-          if (term == 'month') {
+
+        if (plan === 'light') { // 厳密な比較に修正
+          if (term === 'month') { // 厳密な比較に修正
             amount = 25700;
           } else {
             amount = 308400;
           }
         }
+        // wide プランがcorporation/100to300に存在しない場合は、
+        // ここに何も書かないか、デフォルト値を設定することができます
       }
-  
-      if (headcount == '10to100') {
-        if (plan == 'standard') {
-          if (term == 'month') {
+
+      if (headcount === '10to100') { // 厳密な比較に修正
+        if (plan === 'standard') { // 厳密な比較に修正
+          if (term === 'month') { // 厳密な比較に修正
             amount = 43400;
           } else {
             amount = 520800;
           }
         }
-  
-        if (plan == 'light') {
-          if (term == 'month') {
+
+        if (plan === 'light') { // 厳密な比較に修正
+          if (term === 'month') { // 厳密な比較に修正
             amount = 21000;
           } else {
             amount = 252000;
           }
         }
+        // wide プランがcorporation/10to100に存在しない場合は、
+        // ここに何も書かないか、デフォルト値を設定することができます
       }
-  
-      if (headcount == 'under10') {
-        if (plan == 'standard') {
-          if (term == 'month') {
+
+      if (headcount === 'under10') { // 厳密な比較に修正
+        if (plan === 'standard') { // 厳密な比較に修正
+          if (term === 'month') { // 厳密な比較に修正
             amount = 18400;
           } else {
             amount = 220800;
           }
         }
+        // light/wide プランがcorporation/under10に存在しない場合は、
+        // ここに何も書かないか、デフォルト値を設定することができます
       }
     }
-  
+
     return '¥' + amount.toLocaleString();
   }
 </script>
-
-
     <footer>
     <ul class='fnav0'>
       <li><a href="/lp">bonobo</a></li>
