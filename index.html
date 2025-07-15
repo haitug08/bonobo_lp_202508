@@ -205,8 +205,8 @@
 </div>
 </section>
 </form><script>
-  const contractType = "corporation";
-  const headcount = "under10";
+  const contractType = "personal";
+  const headcount = "personal";
   let term = "month";
   let plan = "standard";
   
@@ -223,18 +223,25 @@
     });
   });
   
-  document.querySelectorAll("input[name='plan']").forEach((element) => {
-    element.addEventListener('change', (event) => {
-      if (event.target.value == 'スタンダード') {
-        plan = 'standard';
-      } else {
-        plan = 'light';        
-      }
-  
-      document.getElementById('amountFooter').innerHTML = getAmount(contractType, headcount, plan, term);
-      document.getElementById('amountRight').innerHTML = getAmount(contractType, headcount, plan, term);
-    });
+document.querySelectorAll("input[name='plan']").forEach((element) => {
+  element.addEventListener('change', (event) => {
+    let plan; // plan変数を宣言
+    if (event.target.value === 'スタンダード') {
+      plan = 'standard';
+    } else if (event.target.value === 'ライト') {
+      plan = 'light';
+    } else if (event.target.value === 'ワイド') {
+      plan = 'wide';
+    } else {
+      // 予期せぬ値の場合のデフォルト値やエラーハンドリングをここに記述することもできます
+      console.warn('不明なプランが選択されました:', event.target.value);
+      plan = ''; // または適切なデフォルト値
+    }
+
+    document.getElementById('amountFooter').innerHTML = getAmount(contractType, headcount, plan, term);
+    document.getElementById('amountRight').innerHTML = getAmount(contractType, headcount, plan, term);
   });
+});
   
   setDefaultAmount();
   
@@ -246,15 +253,21 @@
   function getAmount(type, headcount, plan, term) {
     let amount = 0;
   
-    if (type == 'personal') {
-      if (plan == 'standard') {
-        if (term == 'month') {
-          amount = 10400;
-        } else {
-          amount = 124800;
-        }
-      }
+if (type === 'personal') {
+  if (plan === 'standard') {
+    if (term === 'month') {
+      amount = 10400;
+    } else {
+      amount = 124800;
     }
+  } else if (plan === 'wide') { // wideプランの条件を追加
+    if (term === 'month') {
+      amount = 18400;
+    } else {
+      amount = 220800;
+    }
+  }
+}
   
     if (type == 'corporation') {
       if (headcount == '100to300') {
