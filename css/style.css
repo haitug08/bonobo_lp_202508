@@ -87,14 +87,14 @@ header #logo {
 header .btn_1 {
 	position: absolute;z-index: 1;
 	left: 10%;	/*左からの配置場所*/
-	top: 90%;	/*上からの配置場所*/
+	top: 85%;	/*上からの配置場所*/
 	width: 10%;	/*幅*/
 }
 
 header .btn_2 {
 	position: absolute;z-index: 1;
-	left: 20%;	/*左からの配置場所*/
-	top: 90%;	/*上からの配置場所*/
+	left: 22%;	/*左からの配置場所*/
+	top: 85%;	/*上からの配置場所*/
 	width: 10%;	/*幅*/
 }
 
