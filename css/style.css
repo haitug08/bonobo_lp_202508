@@ -270,6 +270,12 @@ header .btn_2:hover {
 	height: 400px;
 }
 
+.img_03 {
+	display: block;
+	margin: auto;
+	padding-top: 150px;
+}
+
 
 .txt_01 {
 	text-align: center;
