@@ -276,6 +276,11 @@ header .btn_2:hover {
 	padding-top: 150px;
 }
 
+.img_04 {
+	display: block;
+	width: 404px;
+	height: 390px;
+}
 
 .txt_01 {
 	text-align: center;
