@@ -439,15 +439,20 @@ header #logo {
 }
 header .btn_1 {
 	left: 30%;	/*左からの配置場所*/
-	width: 40%;	/*幅*/
+	width: 20%;	/*幅*/
 	top: 40%;	/*上からの配置場所*/
 }
 header .btn_2 {
-	left: 30%;	/*左からの配置場所*/
-	width: 40%;	/*幅*/
+	left: 55%;	/*左からの配置場所*/
+	width: 20%;	/*幅*/
 	top: 50%;	/*上からの配置場所*/
 }
-
+.home header .btn_1 {
+	top: 95%;
+}
+.home header .btn_2 {
+	top: 95%;
+}
 	
 	
 /*３本バーアイコン設定
