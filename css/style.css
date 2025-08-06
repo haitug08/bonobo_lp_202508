@@ -80,9 +80,12 @@ header {
 /*ロゴ画像*/
 header #logo {
 	position: absolute;z-index: 1;
-	left: 40%;	/*左からの配置場所*/
-	top: 60%;	/*上からの配置場所*/
 	width: 20%;	/*幅*/
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
 }
 header .btn_1 {
 	position: absolute;z-index: 1;
