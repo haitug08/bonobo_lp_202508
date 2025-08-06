@@ -89,6 +89,10 @@ header .btn_1 {
 	left: 40%;	/*左からの配置場所*/
 	top: 85%;	/*上からの配置場所*/
 	width: 8%;	/*幅*/
+	transition-duration: .4s;
+}
+header .btn_1:hover {
+	transform: scale(1.1);
 }
 
 header .btn_2 {
