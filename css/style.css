@@ -254,10 +254,9 @@ header .btn_2:hover {
 }
 
 .img_02 {
-	display: block;
-	width: 48%;
-	height: auto;
-	max-width: 550px;
+	display: block;    
+	width: 560px;
+	height: 400px;
 }
 
 
