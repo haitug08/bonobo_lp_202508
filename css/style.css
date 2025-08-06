@@ -198,10 +198,8 @@ header .btn_2:hover {
 }
 /*h2タグ内のspanタグ（装飾文字）*/
 #contents h2 span {
-	display: inline-block;white-space: nowrap;
-	font-size: 0.875rem;	/*文字サイズ。冒頭で指定しているフォントサイズの0.875倍です。*/
-	border-top: 3px solid #a9d1ec;	/*上の線の幅、線種、色*/
-	padding: 15px 20px 0;	/*上、左右、下への余白*/
+	color: #00A0BD;
+	font-size: -webkit-xxx-large;
 }
 /*h3タグ*/
 #contents h3 {
