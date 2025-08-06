@@ -76,7 +76,7 @@
 /*mainimg
 ---------------------------------------------------------------------------*/
 /*画像ブロック*/
-#mainimg {
+.mainimg {
 	clear: left;width: 100%;margin: 0 auto;position: relative;
 }
 /* ３枚画像の共通設定 */
