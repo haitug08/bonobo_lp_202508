@@ -233,7 +233,7 @@ header .btn_2:hover {
 }
 
 .bg_01 {
-	background-image: url(../images/4.png);
+	background-image: url("../images/4.png");
 	background-position: bottom;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -248,6 +248,15 @@ header .btn_2:hover {
 	background-repeat: no-repeat;
 	padding-bottom: 200px;
 }
+
+.bg_03 {
+	background-image: url("../images/6.png");
+	background-size: contain;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	padding-bottom: 200px;
+}
+
 
 .img_01 {
 	display: block;
