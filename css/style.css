@@ -39,7 +39,7 @@ body {
 h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 1rem;font-weight: normal;}
 ul {list-style-type: none;}
 ol {padding-left: 40px;padding-bottom: 15px;}
-img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+img {border: none;width: 100%;height: auto;vertical-align: middle;}
 table {border-collapse:collapse;font-size: 1rem;border-spacing: 0;}
 video {max-width: 100%;}
 iframe {width: 100%;}
