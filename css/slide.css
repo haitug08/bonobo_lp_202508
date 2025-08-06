@@ -3,30 +3,74 @@
 
 /*CSSスライドショー設定
 ---------------------------------------------------------------------------*/
-/*１枚目*/
+/* １枚目 */
 @keyframes slide1 {
-	0% {opacity: 0;}
-	10% {opacity: 1;}
-	35% {opacity: 1;}
-	45% {opacity: 0;}
-	100% {opacity: 0;}
+    0% {
+        opacity: 0;
+        transform: scale(1.05); /* 開始時は少し拡大 */
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1); /* ズームアウトしながらフェードイン */
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1); /* 表示状態を維持 */
+    }
+    45% {
+        opacity: 0;
+        transform: scale(1.05); /* 次の切り替え準備で拡大 */
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.05); /* 非表示状態を維持 */
+    }
 }
 /*２枚目*/
 @keyframes slide2 {
-	0% {opacity: 0;}
-	25% {opacity: 0;}
-	35% {opacity: 1;}
-	65% {opacity: 1;}
-	75% {opacity: 0;}
-	100% {opacity: 0;}
+    0% {
+        opacity: 0;
+        transform: scale(1.05); /* 開始時は少し拡大 */
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1); /* ズームアウトしながらフェードイン */
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1); /* 表示状態を維持 */
+    }
+    45% {
+        opacity: 0;
+        transform: scale(1.05); /* 次の切り替え準備で拡大 */
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.05); /* 非表示状態を維持 */
+    }
 }
 /*３枚目*/
 @keyframes slide3 {
-	0% {opacity: 0;}
-	55% {opacity: 0;}
-	65% {opacity: 1;}
-	90% {opacity: 1;}
-	100% {opacity: 0;}
+    0% {
+        opacity: 0;
+        transform: scale(1.05); /* 開始時は少し拡大 */
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1); /* ズームアウトしながらフェードイン */
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1); /* 表示状態を維持 */
+    }
+    45% {
+        opacity: 0;
+        transform: scale(1.05); /* 次の切り替え準備で拡大 */
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.05); /* 非表示状態を維持 */
+    }
 }
 
 /*mainimg
@@ -35,14 +79,17 @@
 #mainimg {
 	clear: left;width: 100%;margin: 0 auto;position: relative;
 }
-/*３枚画像の共通設定*/
-.slide1,.slide2,.slide3 {
-	width: 100%;
-	animation-duration: 18s;	/*実行する時間。「s」は秒の事。*/
-	animation-iteration-count:infinite;		/*実行する回数。「infinite」は無限に繰り返す意味。*/
-	position: absolute;left:0px;top:0px;
-	animation-fill-mode: both;
-	animation-delay: 1s;
+/* ３枚画像の共通設定 */
+.slide1, .slide2, .slide3 {
+    width: 100%;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    transition: transform 1s ease-in-out; /* 追加 */
 }
 /*土台画像*/
 .slide0 {
