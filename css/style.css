@@ -283,7 +283,7 @@ header .btn_2:hover {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin: 5%;
+	margin: 0 5%;
 	padding: 5%;
 }
 
