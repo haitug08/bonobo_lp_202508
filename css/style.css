@@ -240,6 +240,13 @@ header .btn_2:hover {
 	margin: auto;
 }
 
+.txt {
+	text-align: center;
+	color: #000000;
+	font-weight: bold;
+	margin: 50px;
+	font-size: 1.2rem;
+}
 
 
 /*list（円形のサムネイル用）
