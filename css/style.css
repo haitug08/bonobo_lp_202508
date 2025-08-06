@@ -287,8 +287,9 @@ header .btn_2:hover {
 	padding: 5%;
 }
 
-.box {
-  width: 48%;
+.box {    
+	width: 40%;
+	margin: 0 3%;
 }
 
 
