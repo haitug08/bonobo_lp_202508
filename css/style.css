@@ -309,6 +309,15 @@ header .btn_2:hover {
 	padding: 5%;
 }
 
+.wrap_02 {
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+	margin: 0 5%;
+	padding: 0 5%;
+}
+
+
 .box {    
 	width: 40%;
 	margin: 0 3%;
