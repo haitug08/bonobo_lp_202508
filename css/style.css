@@ -311,7 +311,7 @@ header .btn_2:hover {
 
 .wrap_02 {
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	flex-wrap: wrap;
 	margin: 0 5%;
 	padding: 0 5%;
