@@ -251,7 +251,14 @@ header .btn_2:hover {
 	margin: auto;
 }
 
-.txt {
+.img_02 {
+	display: block;
+	width: 48%;
+	height: auto;
+}
+
+
+.txt_01 {
 	text-align: center;
 	color: #000000;
 	font-weight: bold;
@@ -260,6 +267,16 @@ header .btn_2:hover {
 	line-height: 2.5;
 }
 
+.txt_02 {
+	text-align: left;
+	color: #000000;
+	font-weight: bold;
+	margin: 50px;
+	font-size: 1.2rem;
+	line-height: 2.5;
+}
+
+
 .wrap {
   display: flex;
   justify-content: space-between;
@@ -267,11 +284,6 @@ header .btn_2:hover {
   flex-wrap: wrap;
 }
 
-.img_02 {
-  display: block;
-  width: 48%;
-  height: auto;
-}
 
 .box {
   width: 48%;
