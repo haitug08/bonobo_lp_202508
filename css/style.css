@@ -251,10 +251,11 @@ header .btn_2:hover {
 
 .bg_03 {
 	background-image: url("../images/6.png");
-	background-size: contain;
+	background-size: cover;
 	background-position: bottom;
 	background-repeat: no-repeat;
 	padding-bottom: 200px;
+	height: 2000px;
 }
 
 
