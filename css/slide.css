@@ -5,7 +5,7 @@
 /*画像ブロック*/
 .mainimg {
 	clear: left;width: 100%;margin: 0 auto;position: relative;
-	animation: animationZoom1 5s ease-in-out forwards;
+	animation: animationZoom1 10s ease-in-out forwards;
 }
 /* ３枚画像の共通設定 */
 .slide1, .slide2, .slide3 {
