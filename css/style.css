@@ -219,11 +219,17 @@ header .btn_2 {
 	margin-top: 100px;
 }
 
-.img_01 {
+.bg_01 {
 	background-image: url("../images/4.png");
 	background-size:  cover;    
-	min-height: 1200px;
+	min-height: 1100px;
 }
+
+.img_01 {
+	display: block;
+	margin: auto;
+}
+
 
 
 /*list（円形のサムネイル用）
