@@ -243,9 +243,9 @@ header .btn_2:hover {
 
 .bg_02 {
 	background-image: url("../images/5.png");
-	background-size: cover;
+	background-size: auto;
 	background-position: bottom;
-	height: 1800px;
+	background-repeat: no-repeat;
 }
 
 .img_01 {
