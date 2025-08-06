@@ -142,7 +142,7 @@ header #logo {
 /*コンテンツ
 ---------------------------------------------------------------------------*/
 #contents {
-	padding: 150px 100px;	/*上下、左右へのコンテンツ内の余白*/
+	padding: 150px 0px;	/*上下、左右へのコンテンツ内の余白*/
 	position: relative;
 	animation-name: opa1;		/*keyframes.cssで使う@keyframesの指定*/
 	animation-duration: 0.5S;	/*アニメーションの実行時間*/
