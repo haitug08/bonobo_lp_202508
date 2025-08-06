@@ -221,8 +221,9 @@ header .btn_2 {
 
 .bg_01 {
 	background-image: url("../images/4.png");
-	background-size:  cover;    
-	min-height: 1100px;
+	background-size: cover;
+	background-position: bottom;
+	height: 1200px;
 }
 
 .img_01 {
