@@ -188,10 +188,12 @@ header .btn_2:hover {
 /*h2タグ*/
 #contents h2 {
 	clear: both;
-	margin-bottom: 50px;	/*下に空けるスペース*/
-	font-size: 2.25rem;		/*文字サイズ。冒頭で指定しているフォントサイズの2.25倍です。*/
-	text-align: center;		/*文字をセンタリング*/
-	letter-spacing: 0.1em;	/*文字間隔を少し広めにとる指定。通常がいいならこの１行削除。*/
+	margin-bottom: 20px;	
+	font-size: 2.0rem;	
+	text-align: left;	
+	color: #000000;
+	font-weight: bold;
+	line-height: normal;
 }
 /*h2タグ内のspanタグ（装飾文字）*/
 #contents h2 span {
@@ -276,14 +278,14 @@ header .btn_2:hover {
 	line-height: 2.5;
 }
 
-
 .wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 5%;
+	padding: 5%;
 }
-
 
 .box {
   width: 48%;
