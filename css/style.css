@@ -257,6 +257,7 @@ header .btn_2:hover {
 	display: block;
 	width: 48%;
 	height: auto;
+	max-width: 550px;
 }
 
 
@@ -281,8 +282,7 @@ header .btn_2:hover {
 
 .wrap {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: center;
 	flex-wrap: wrap;
 	margin: 5%;
 	padding: 5%;
