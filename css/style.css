@@ -260,6 +260,24 @@ header .btn_2:hover {
 	line-height: 2.5;
 }
 
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.img_02 {
+  display: block;
+  width: 48%;
+  height: auto;
+}
+
+.box {
+  width: 48%;
+}
+
+
 
 /*list（円形のサムネイル用）
 ---------------------------------------------------------------------------*/
