@@ -100,7 +100,12 @@ header .btn_2 {
 	left: 50%;	/*左からの配置場所*/
 	top: 85%;	/*上からの配置場所*/
 	width: 8%;	/*幅*/
+	transition-duration: .4s;
 }
+header .btn_2:hover {
+	transform: scale(1.1);
+}
+
 
 /*ロゴ画像（※トップページへの追加設定）*/
 .home header #logo {
