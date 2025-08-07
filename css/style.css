@@ -253,7 +253,7 @@ header .wrap {
 .bg_03 {
 	background-image: url("../images/6.png");
 	background-size: cover;
-	background-position: bottom;
+	background-position: top;
 	background-repeat: no-repeat;
 	height: 1800px;
 }
