@@ -332,14 +332,6 @@ header .wrap {
 	transform: scale(1.1);
 }
 
-.btn_4 {
-	margin: 0 30px;
-	transition-duration: .4s;
-}
-.btn_4:hover {
-	transform: scale(1.1);
-}
-
 
 
 /*list（円形のサムネイル用）
