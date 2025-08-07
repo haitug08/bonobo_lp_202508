@@ -318,6 +318,14 @@ header .btn_2:hover {
 }
 
 
+.btn_3 {
+	z-index: 1;
+	transition-duration: .4s;
+}
+.btn_3:hover {
+	transform: scale(1.1);
+}
+
 
 /*list（円形のサムネイル用）
 ---------------------------------------------------------------------------*/
