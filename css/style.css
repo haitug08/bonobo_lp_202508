@@ -370,7 +370,8 @@ header .wrap {
 	text-align: center;
 	cursor: pointer;
 	transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-	text-decoration: none; 
+	text-decoration: none;
+	margin-left: 30px;
 }
 .btn_4:hover {
 	background: #00A0BD;
