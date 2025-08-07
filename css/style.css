@@ -283,6 +283,13 @@ header .wrap {
 	height: 390px;
 }
 
+.img_05 {	
+	transition-duration: .4s;
+}
+.img_05:hover {
+	transform: scale(1.1);
+}
+
 .txt_01 {
 	text-align: center;
 	color: #000000;
