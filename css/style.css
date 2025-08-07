@@ -290,6 +290,16 @@ header .wrap {
 	transform: scale(1.1);
 }
 
+.img_06 {
+	display: block;
+	width: 404px;
+	height: 390px;
+	transition-duration: .4s;
+}
+.img_06:hover {
+	transform: scale(1.1);
+}
+
 .txt_01 {
 	text-align: center;
 	color: #000000;
