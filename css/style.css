@@ -326,7 +326,7 @@ header .wrap {
 
 
 .btn_3 {
-	z-index: 1;
+	margin: 0 30px;
 	transition-duration: .4s;
 }
 .btn_3:hover {
