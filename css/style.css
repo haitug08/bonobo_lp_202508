@@ -358,6 +358,26 @@ header .wrap {
 	transform: scale(1.1);
 }
 
+.btn_4 {
+	background: #ffffff;
+	border: 2px solid #00A0BD;
+	border-radius: 60px;
+	color: #00A0BD;
+	display: block;
+	font-weight: bold;
+	max-width: 150px;
+	padding: 3px 20px;
+	text-align: center;
+	cursor: pointer;
+	transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+.btn_4:hover {
+	background: #ffffff;
+	color: #00A0BD;
+}
+
+
+
 
 
 /*list（円形のサムネイル用）
