@@ -1,6 +1,6 @@
 /*
- * �u���b�N�J����
- * 2015/12/21 �{�^���摜�̔�\���������s��Ȃ�
+ * ブロック開閉処理
+ * 2015/12/21 ボタン画像の非表示処理を行わない
  */
 /*
  * Return the classList property of e, if it has one.
@@ -124,4 +124,25 @@ function OCwindowWidth()
 		return window.screen.width;
 	}
 	return window.innerWidth;
+}
+
+function reloadModalIframes() {
+  const modalLinks = document.querySelectorAll('a[href^="#modal"], a[href^="#accident"]');
+
+  modalLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const targetId = this.getAttribute('href').substring(1);
+      const modal = document.getElementById(targetId);
+      
+      if (modal) {
+        const iframe = modal.querySelector('iframe');
+        if (iframe) {
+          // iframeのsrcを再設定して強制的に再読み込み
+          const originalSrc = iframe.src.split('?')[0]; // URLのクエリパラメータを除去
+          const queryString = iframe.src.split('?')[1] || ''; // クエリパラメータを保持
+          iframe.src = `${originalSrc}?${queryString}`;
+        }
+      }
+    });
+  });
 }
