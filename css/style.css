@@ -372,8 +372,8 @@ header .wrap {
 	transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 }
 .btn_4:hover {
-	background: #ffffff;
-	color: #00A0BD;
+	background: #00A0BD;
+	color: #ffffff;
 }
 
 
