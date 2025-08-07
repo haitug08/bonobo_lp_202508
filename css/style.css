@@ -79,7 +79,8 @@ header {
 }
 /*ロゴ画像*/
 header #logo {
-	position: absolute;z-index: 1;
+	position: absolute;
+	z-index: 1;
 	width: 20%;	/*幅*/
 	top: 0;
 	right: 0;
@@ -88,7 +89,7 @@ header #logo {
 	margin: auto;
 }
 header .btn_1 {
-	position: absolute;z-index: 1;
+	z-index: 1;
 	transition-duration: .4s;
 }
 header .btn_1:hover {
@@ -96,7 +97,7 @@ header .btn_1:hover {
 }
 
 header .btn_2 {
-	position: absolute;z-index: 1;
+	z-index: 1;
 	transition-duration: .4s;
 }
 header .btn_2:hover {
