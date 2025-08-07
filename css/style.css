@@ -104,6 +104,13 @@ header .btn_2:hover {
 	transform: scale(1.1);
 }
 
+header .wrap {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 5%;
+}
+
 
 /*ロゴ画像（※トップページへの追加設定）*/
 .home header #logo {
