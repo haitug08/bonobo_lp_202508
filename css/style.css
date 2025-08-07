@@ -333,6 +333,7 @@ header .wrap {
 }
 
 .btn_4 {
+	margin: 0 30px;
 	transition-duration: .4s;
 }
 .btn_4:hover {
