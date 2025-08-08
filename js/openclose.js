@@ -126,23 +126,42 @@ function OCwindowWidth()
 	return window.innerWidth;
 }
 
-function reloadModalIframes() {
-  const modalLinks = document.querySelectorAll('a[href^="#modal"], a[href^="#accident"]');
+document.addEventListener('DOMContentLoaded', function() {
+  const openPlanModalBtn = document.getElementById('openPlanModal');
+  const modal = document.getElementById('plan');
+  const closeModalBtn = modal.querySelector('.close');
+  const iframe = modal.querySelector('iframe');
 
-  modalLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      const targetId = this.getAttribute('href').substring(1);
-      const modal = document.getElementById(targetId);
-      
-      if (modal) {
-        const iframe = modal.querySelector('iframe');
-        if (iframe) {
-          // iframeのsrcを再設定して強制的に再読み込み
-          const originalSrc = iframe.src.split('?')[0]; // URLのクエリパラメータを除去
-          const queryString = iframe.src.split('?')[1] || ''; // クエリパラメータを保持
-          iframe.src = `${originalSrc}?${queryString}`;
-        }
-      }
-    });
+  openPlanModalBtn.addEventListener('click', function(e) {
+    e.preventDefault(); // 画面上部へのジャンプを防止
+    modal.style.display = 'flex'; // まずは表示
+    setTimeout(() => {
+      modal.classList.add('open');
+    }, 10); // 短い遅延を入れてアニメーションを適用
+
+    const originalSrc = iframe.src;
+    iframe.src = originalSrc;
   });
-}
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.classList.add('close-animation');
+
+    modal.addEventListener('animationend', function() {
+      modal.style.display = 'none';
+      modal.classList.remove('close-animation');
+    }, { once: true }); // イベントリスナーを一度だけ実行
+  }
+
+  closeModalBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeModal();
+  });
+
+  modal.addEventListener('click', function(e) {
+    // クリックされた要素がモーダル自体であるか確認
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+});
