@@ -353,6 +353,12 @@ header .wrap {
     padding: 15px 30px;
 }
 
+.txt_06 {
+	text-align: center;
+    color: #00A0BD;
+    font-weight: bold;
+}
+
 .wrap {
 	display: flex;
 	justify-content: center;
