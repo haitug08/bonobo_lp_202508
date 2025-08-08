@@ -354,7 +354,7 @@ header .wrap {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: nowrap;
-	padding-bottom: 40px 0px;
+	padding: 40px 0px;
 	display: flex;
     justify-content: center;
 }
