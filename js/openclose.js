@@ -129,7 +129,7 @@ function OCwindowWidth()
 document.addEventListener('DOMContentLoaded', function() {
   const openPlanModalBtn = document.getElementById('openPlanModal');
   const modal = document.getElementById('plan');
-  const closeBtn = modal.querySelector('.close-btn'); // 新しいボタンの要素を取得
+  const closeBtn = modal.querySelector('.close-btn');
   const iframe = modal.querySelector('iframe');
 
   openPlanModalBtn.addEventListener('click', function(e) {
@@ -160,9 +160,32 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   modal.addEventListener('click', function(e) {
-    // クリックされた要素がモーダル自体であるか確認
     if (e.target === modal) {
       closeModal();
     }
   });
+});
+
+
+const swiper = new Swiper(".swiper", {
+  pagination: {
+    el: ".swiper-pagination"
+  },
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "2",
+
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
 });
