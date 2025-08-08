@@ -380,6 +380,15 @@ header .wrap {
     padding: 0px;
 }
 
+.txt_08 {
+    text-align: left;
+    color: #000000;
+    margin: 10px;
+    padding: 0px;
+	font-size: smaller;
+}
+
+
 .wrap {
 	display: flex;
 	justify-content: center;
