@@ -319,8 +319,16 @@ header .wrap {
     height: auto;
     display: block;
     margin: auto;
-	padding-top: 30px 0;
+	padding: 30px 0;
 }
+
+.img_10 {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 0;
+}	
 
 .txt_01 {
 	text-align: center;
