@@ -205,3 +205,163 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const openService2ModalBtn = document.getElementById('openService2Modal');
+  const modal = document.getElementById('service2');
+  const closeBtn = modal.querySelector('.close-btn');
+  const iframe = modal.querySelector('iframe');
+
+  openService2ModalBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    setTimeout(() => {
+      modal.classList.add('open');
+    }, 10);
+
+    const originalSrc = iframe.src;
+    iframe.src = originalSrc;
+  });
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.classList.add('close-animation');
+
+    modal.addEventListener('animationend', function() {
+      modal.style.display = 'none';
+      modal.classList.remove('close-animation');
+    }, { once: true });
+  }
+
+  // 「閉じる」ボタンのクリックイベントのみを記述
+  closeBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeModal();
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const openService3ModalBtn = document.getElementById('openService3Modal');
+  const modal = document.getElementById('service3');
+  const closeBtn = modal.querySelector('.close-btn');
+  const iframe = modal.querySelector('iframe');
+
+  openService3ModalBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    setTimeout(() => {
+      modal.classList.add('open');
+    }, 10);
+
+    const originalSrc = iframe.src;
+    iframe.src = originalSrc;
+  });
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.classList.add('close-animation');
+
+    modal.addEventListener('animationend', function() {
+      modal.style.display = 'none';
+      modal.classList.remove('close-animation');
+    }, { once: true });
+  }
+
+  // 「閉じる」ボタンのクリックイベントのみを記述
+  closeBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeModal();
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const openService4ModalBtn = document.getElementById('openService4Modal');
+  const modal = document.getElementById('service4');
+  const closeBtn = modal.querySelector('.close-btn');
+  const iframe = modal.querySelector('iframe');
+
+  openService4ModalBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    setTimeout(() => {
+      modal.classList.add('open');
+    }, 10);
+
+    const originalSrc = iframe.src;
+    iframe.src = originalSrc;
+  });
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.classList.add('close-animation');
+
+    modal.addEventListener('animationend', function() {
+      modal.style.display = 'none';
+      modal.classList.remove('close-animation');
+    }, { once: true });
+  }
+
+  // 「閉じる」ボタンのクリックイベントのみを記述
+  closeBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeModal();
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const openService5ModalBtn = document.getElementById('openService5Modal');
+  const modal = document.getElementById('service5');
+  const closeBtn = modal.querySelector('.close-btn');
+  const iframe = modal.querySelector('iframe');
+
+  openService5ModalBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    setTimeout(() => {
+      modal.classList.add('open');
+    }, 10);
+
+    const originalSrc = iframe.src;
+    iframe.src = originalSrc;
+  });
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.classList.add('close-animation');
+
+    modal.addEventListener('animationend', function() {
+      modal.style.display = 'none';
+      modal.classList.remove('close-animation');
+    }, { once: true });
+  }
+
+  // 「閉じる」ボタンのクリックイベントのみを記述
+  closeBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeModal();
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+});
