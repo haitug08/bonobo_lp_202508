@@ -346,6 +346,13 @@ header .wrap {
     padding: 0px;
 }
 
+.txt_05 {
+	text-align: left;
+    color: #000000;
+    margin: 30px;
+    padding: 30px;
+}
+
 .wrap {
 	display: flex;
 	justify-content: center;
