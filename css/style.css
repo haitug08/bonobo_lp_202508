@@ -314,6 +314,14 @@ header .wrap {
     padding: 5px;
 }
 
+.img_09{
+	width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+	padding-top: 30px;
+}
+
 .txt_01 {
 	text-align: center;
 	color: #000000;
