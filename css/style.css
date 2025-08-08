@@ -711,13 +711,15 @@ header .btn_2 {
 }
 
 .close-btn {
-  padding: 10px 20px;
+　padding: 10px 20px;
   margin-top: 20px;
   cursor: pointer;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  align-self: center; 
+  border: none;
+  background-color: #ffffff;
+  align-self: center;
+  color: #8D98B2;
+  font-weight: bold;
+  font-size: medium;
 }
 
 
