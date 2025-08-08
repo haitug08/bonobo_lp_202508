@@ -304,6 +304,11 @@ header .wrap {
 	display: inline-block;
 }
 
+.img_08{
+	margin: 5px;
+    padding: 5px;
+}
+
 .txt_01 {
 	text-align: center;
 	color: #000000;
@@ -330,6 +335,15 @@ header .wrap {
 	font-size: 1.0rem;
 	margin: 30px;
 	padding: 0px;
+}
+
+.txt_04 {
+    text-align: left;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 30px;
+    padding: 0px;
 }
 
 .wrap {
