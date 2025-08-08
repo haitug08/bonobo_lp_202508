@@ -165,3 +165,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const openService1ModalBtn = document.getElementById('openService1Modal');
+  const modal = document.getElementById('service1');
+  const closeBtn = modal.querySelector('.close-btn');
+  const iframe = modal.querySelector('iframe');
+
+  openService1ModalBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    setTimeout(() => {
+      modal.classList.add('open');
+    }, 10);
+
+    const originalSrc = iframe.src;
+    iframe.src = originalSrc;
+  });
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.classList.add('close-animation');
+
+    modal.addEventListener('animationend', function() {
+      modal.style.display = 'none';
+      modal.classList.remove('close-animation');
+    }, { once: true });
+  }
+
+  // 「閉じる」ボタンのクリックイベントのみを記述
+  closeBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeModal();
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+});
