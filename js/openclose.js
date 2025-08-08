@@ -135,9 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
   openPlanModalBtn.addEventListener('click', function(e) {
     e.preventDefault();
     modal.style.display = 'flex';
-    setTimeout(() => {
-      modal.classList.add('open');
-    }, 10);
+    modal.classList.add('open');
 
     const originalSrc = iframe.src;
     iframe.src = originalSrc;
