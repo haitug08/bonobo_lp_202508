@@ -42,7 +42,6 @@ ol {padding-left: 40px;padding-bottom: 15px;}
 img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
 table {border-collapse:collapse;font-size: 1rem;border-spacing: 0;}
 video {max-width: 100%;}
-iframe {width: 100%;}
 
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
@@ -740,4 +739,10 @@ header .btn_2 {
     transform: translateY(20px);
     opacity: 0;
   }
+}
+
+iframe {
+	width: 100%;
+	border: none;
+    height: -webkit-fill-available;
 }
