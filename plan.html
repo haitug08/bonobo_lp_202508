@@ -8,11 +8,22 @@
 <meta name="description" content="保険料プラン｜bonobo">
 <link rel="stylesheet" href="css/style.css">
 <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/openclose.js"></script>
 <script src="js/fixmenu_pagetop.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
 </head>
 
+<script>
+ var swiper = new Swiper(".mySwiper", {
+  pagination: {
+   el: ".swiper-pagination",
+   clickable: true,
+  },
+ });
+</script>
+    
 <body class="home">
     <div class="swiper-container mySwiper">
         <div class="swiper-wrapper">
