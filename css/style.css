@@ -302,6 +302,11 @@ header .wrap {
 	width: auto;
 	height: 100%;
 	display: inline-block;
+	transition-duration: .4s;
+}
+
+.img_07:hover {
+	transform: scale(1.1);
 }
 
 .img_08{
