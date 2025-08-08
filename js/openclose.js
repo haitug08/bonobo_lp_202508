@@ -129,16 +129,15 @@ function OCwindowWidth()
 document.addEventListener('DOMContentLoaded', function() {
   const openPlanModalBtn = document.getElementById('openPlanModal');
   const modal = document.getElementById('plan');
-  const closeBtn = modal.querySelector('.close-btn');
-  const closeModalBtn = modal.querySelector('.close');
+  const closeBtn = modal.querySelector('.close-btn'); // 新しいボタンの要素を取得
   const iframe = modal.querySelector('iframe');
 
   openPlanModalBtn.addEventListener('click', function(e) {
-    e.preventDefault(); // 画面上部へのジャンプを防止
-    modal.style.display = 'flex'; // まずは表示
+    e.preventDefault();
+    modal.style.display = 'flex';
     setTimeout(() => {
       modal.classList.add('open');
-    }, 10); // 短い遅延を入れてアニメーションを適用
+    }, 10);
 
     const originalSrc = iframe.src;
     iframe.src = originalSrc;
@@ -154,17 +153,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { once: true });
   }
 
+  // 「閉じる」ボタンのクリックイベントのみを記述
   closeBtn.addEventListener('click', function(e) {
     e.preventDefault();
     closeModal();
   });
 
-  closeModalBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    closeModal();
-  });
-
   modal.addEventListener('click', function(e) {
+    // クリックされた要素がモーダル自体であるか確認
     if (e.target === modal) {
       closeModal();
     }
