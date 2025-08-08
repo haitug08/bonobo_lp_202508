@@ -373,6 +373,13 @@ header .wrap {
     font-weight: bold;
 }
 
+.txt_07 {
+    text-align: left;
+    color: #000000;
+    margin: 30px;
+    padding: 0px;
+}
+
 .wrap {
 	display: flex;
 	justify-content: center;
