@@ -368,9 +368,8 @@ header .wrap {
 }
 
 .wrap_03::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(
-      135deg, #1EC5D7 10%, #00A0BD 100%
-    );
+    background-image: linear-gradient(135deg, #1EC5D7 10%, #00A0BD 100%	);
+	border-radius: 10px;
 }
 
 
