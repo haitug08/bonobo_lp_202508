@@ -17,14 +17,20 @@
 
 <script>
 const swiper = new Swiper(".swiper", {
-  slidesPerView: 1,
-  breakpoints: {
-    768: {
-      slidesPerView: 3
-    }
-  },
   pagination: {
     el: ".swiper-pagination"
+  },
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "2",
+
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true
   },
 
   navigation: {
@@ -35,18 +41,18 @@ const swiper = new Swiper(".swiper", {
 </script>
     
 <body class="home">
-<div class="swiper-container mySwiper">
-<div class="swiper-wrapper">
-<div class="swiper-slide"><img class="img_01" src="images/img_17.png" alt="img_17"></div>
-<div class="swiper-slide"><img class="img_01" src="images/img_18.png" alt="img_18"></div>
-<div class="swiper-slide"><img class="img_01" src="images/img_19.png" alt="img_19"></div>
-<div class="swiper-slide"><img class="img_01" src="images/img_20.png" alt="img_20"></div>
+  
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    <div class="swiper-slide">Slide ４</div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
-<div class="swiper-pagination"></div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>  
-</div>
-
 
   
 </body>
