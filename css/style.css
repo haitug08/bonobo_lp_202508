@@ -394,6 +394,14 @@ header .wrap {
 	margin: 0 3%;
 }
 
+.box_2 {    
+	width: 40%;
+    margin: 0 2%;
+    border: 0px solid gray;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px 0 rgb(177 177 177);
+}
+
 .btn_3 {
 	margin: 0 30px;
 	transition-duration: .4s;
