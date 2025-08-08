@@ -675,18 +675,15 @@ header .btn_2 {
   backdrop-filter: blur(8px);
 }
 
-/* JavaScriptでモーダル表示時に付与するクラス */
 .modal.open {
   display: flex;
   animation: fadeIn 0.3s ease-out forwards;
 }
 
-/* モーダル非表示時のアニメーション */
 .modal.close-animation {
   animation: fadeOut 0.3s ease-out forwards;
 }
 
-/* モーダルコンテンツのスタイル */
 .modal-content {
   background-color: #fff;
   padding: 20px;
@@ -697,16 +694,32 @@ header .btn_2 {
   min-height: 450px;
   border-radius: 5px;
   position: relative;
-  /* モーダル表示時のアニメーション初期状態 */
   transform: scale(0.95);
   opacity: 0;
   animation: slideIn 0.3s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
 }
 
-/* モーダルコンテンツ非表示時のアニメーション */
+.modal-content iframe {
+  flex-grow: 1;
+}
+
 .modal.close-animation .modal-content {
   animation: slideOut 0.3s ease-out forwards;
 }
+
+.close-btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  align-self: center; 
+}
+
 
 /* キーフレームアニメーション */
 @keyframes fadeIn {
