@@ -127,46 +127,46 @@ function OCwindowWidth()
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  const openPlanModalBtn = document.getElementById('openPlanModal');
-  const modal = document.getElementById('plan');
-  const iframe = modal.querySelector('iframe');
-  
-  // 共通のクラスを持つ全ての閉じるボタンを取得
-  const closeBtns = modal.querySelectorAll('.js-modal-close'); 
-  
-  // モーダルを開く処理
-  openPlanModalBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    modal.style.display = 'flex';
-    setTimeout(() => {
-      modal.classList.add('open');
-    }, 10);
-    const originalSrc = iframe.src;
-    iframe.src = originalSrc;
-  });
+  const openPlanModalBtn = document.getElementById('openPlanModal');
+  const modal = document.getElementById('plan');
+  const closeBtn = modal.querySelector('.close-btn');
+  const closeModalBtn = modal.querySelector('.close');
+  const iframe = modal.querySelector('iframe');
 
-  // モーダルを閉じる関数
-  function closeModal() {
-    modal.classList.remove('open');
-    modal.classList.add('close-animation');
-    modal.addEventListener('animationend', function() {
-      modal.style.display = 'none';
-      modal.classList.remove('close-animation');
-    }, { once: true });
-  }
+  openPlanModalBtn.addEventListener('click', function(e) {
+    e.preventDefault(); // 画面上部へのジャンプを防止
+    modal.style.display = 'flex'; // まずは表示
+    setTimeout(() => {
+      modal.classList.add('open');
+    }, 10); // 短い遅延を入れてアニメーションを適用
 
-  // 取得した全ての閉じるボタンにイベントリスナーを追加
-  closeBtns.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      closeModal();
-    });
-  });
+    const originalSrc = iframe.src;
+    iframe.src = originalSrc;
+  });
 
-  // 画面外クリックで閉じる処理
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.classList.add('close-animation');
+
+    modal.addEventListener('animationend', function() {
+      modal.style.display = 'none';
+      modal.classList.remove('close-animation');
+    }, { once: true });
+  }
+
+  closeBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeModal();
+  });
+
+  closeModalBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeModal();
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
 });
