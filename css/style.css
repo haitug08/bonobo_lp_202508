@@ -744,5 +744,5 @@ header .btn_2 {
 iframe {
 	width: 100%;
 	border: none;
-    height: -webkit-fill-available;
+    height: 80%;
 }
