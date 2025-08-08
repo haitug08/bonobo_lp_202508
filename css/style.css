@@ -342,15 +342,16 @@ header .wrap {
     color: #000000;
     font-weight: bold;
     font-size: 1.2rem;
-    margin: 30px;
+    margin: 10px 30px;
     padding: 0px;
 }
 
 .txt_05 {
 	text-align: left;
     color: #000000;
-    margin: 15px 30px;
-    padding: 15px 30px;
+    margin: 15px;
+    padding: 10px 30px;
+    font-size: smaller;
 }
 
 .txt_06 {
