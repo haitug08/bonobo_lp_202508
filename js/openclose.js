@@ -129,37 +129,42 @@ function OCwindowWidth()
 document.addEventListener('DOMContentLoaded', function() {
   const openPlanModalBtn = document.getElementById('openPlanModal');
   const modal = document.getElementById('plan');
-  const closeModalBtn = modal.querySelector('.close');
   const iframe = modal.querySelector('iframe');
-
+  
+  // 共通のクラスを持つ全ての閉じるボタンを取得
+  const closeBtns = modal.querySelectorAll('.js-modal-close'); 
+  
+  // モーダルを開く処理
   openPlanModalBtn.addEventListener('click', function(e) {
-    e.preventDefault(); // 画面上部へのジャンプを防止
-    modal.style.display = 'flex'; // まずは表示
+    e.preventDefault();
+    modal.style.display = 'flex';
     setTimeout(() => {
       modal.classList.add('open');
-    }, 10); // 短い遅延を入れてアニメーションを適用
-
+    }, 10);
     const originalSrc = iframe.src;
     iframe.src = originalSrc;
   });
 
+  // モーダルを閉じる関数
   function closeModal() {
     modal.classList.remove('open');
     modal.classList.add('close-animation');
-
     modal.addEventListener('animationend', function() {
       modal.style.display = 'none';
       modal.classList.remove('close-animation');
-    }, { once: true }); // イベントリスナーを一度だけ実行
+    }, { once: true });
   }
 
-  closeModalBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    closeModal();
+  // 取得した全ての閉じるボタンにイベントリスナーを追加
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      closeModal();
+    });
   });
 
+  // 画面外クリックで閉じる処理
   modal.addEventListener('click', function(e) {
-    // クリックされた要素がモーダル自体であるか確認
     if (e.target === modal) {
       closeModal();
     }
