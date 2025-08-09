@@ -605,16 +605,12 @@ ul.icon img:hover {
 .ta2 caption {
 	font-weight: bold;
     padding: 5px;
-    background-color: #00A0BD;
-    color: #ffffff;
-    text-align: center;
-    border-radius: 50px;
-    margin: 10px auto;
-    width: 450px;
+    color: #00A0BD;
+    text-align: left;
 }
 /*ta2テーブル*/
 .ta2 {   
-	width: 800px;
+	width: 1000px;
     table-layout: fixed;
     margin: auto;
 }
@@ -628,7 +624,7 @@ ul.icon img:hover {
 }
 /*左側ボックス*/
 .ta2 th {
-	width: 300px;
+	width: 250px;
     text-align: center;
     font-weight: normal;
     background-color: #f3f3f3;
