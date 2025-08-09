@@ -908,3 +908,26 @@ header .btn_2 {
     z-index: 1;
     transform: translate(-50%,-50%);
 }
+
+.request {
+  position: relative;
+}
+.request-btn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  z-index: 10;
+}
+.request-btn a {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 120px;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: solid 1px #333;
+}
