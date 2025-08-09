@@ -605,29 +605,34 @@ ul.icon img:hover {
 .ta2 caption {
 	font-weight: bold;
     padding: 5px;
-    background-color: #00a0bda1;
+    background-color: #00A0BD;
     color: #ffffff;
     text-align: center;
     border-radius: 50px;
-    margin-bottom: 10px;
+    margin: 10px auto;
     width: 450px;
 }
 /*ta2テーブル*/
-.ta2 {
+.ta2 {   
 	width: 800px;
-	table-layout: fixed;
-	margin: auto;
+    table-layout: fixed;
+    margin: auto;
 }
 .ta2, .ta2 td, .ta2 th {
-	border: 1px solid  #8D98B2;	/*テーブルの枠線の幅、線種、色*/
-	padding: 15px 10px;		/*上下、左右へのボックス内の余白*/
-	word-break: break-all;
+	border: 1px solid #8D98B2;
+    padding: 10px 25px;
+    word-break: break-all;
+    color: #000000;
+    border-left: none;
+    border-right: none;
 }
 /*左側ボックス*/
 .ta2 th {
-	width: 300px;	/*幅*/
-	text-align: center;	/*センタリング*/
-	font-weight: normal;
+	width: 300px;
+    text-align: center;
+    font-weight: normal;
+    background-color: #f3f3f3;
+    border-top: none;
 }
 
 /*checkブロック。赤い注意書きブロックです。
