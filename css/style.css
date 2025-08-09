@@ -625,6 +625,7 @@ p.check a {color: #fff;}
 ---------------------------------------------------------------------------*/
 /*通常時のボタンは非表示*/
 body .nav-fix-pos-pagetop a {display: none;}
+body .nav-fix-pos-request a {display: none;}
 /*fixmenu_pagetop.jsで設定している設定値になったら出現するボタンスタイル*/
 body.is-fixed-pagetop .nav-fix-pos-pagetop a {
 	display: block;text-decoration: none;text-align: center;
@@ -642,11 +643,29 @@ body.is-fixed-pagetop .nav-fix-pos-pagetop a {
 	animation-duration: 1S;	/*アニメーションの実行時間*/
 	animation-fill-mode: both;	/*アニメーションの待機中は最初のキーフレームを維持、終了後は最後のキーフレームを維持。*/
 }
+body.is-fixed-pagetop .nav-fix-pos-request a {
+	display: block;text-decoration: none;text-align: center;
+	width: 50px;		/*幅*/
+	line-height: 50px;	/*高さ*/
+	z-index: 1;
+	position: fixed;
+	bottom: 100px;	/*下から20pxの場所に配置*/
+	right: 3%;		/*右から3%の場所に配置*/
+	background: #666;	/*背景色（古いブラウザ用）*/
+	background: rgba(0,0,0,0.6);	/*背景色。0,0,0は黒の事。0.6は60%色がついた状態。*/
+	color: #fff;	/*文字色*/
+	border: 1px solid #fff;	/*枠線の幅、線種、色*/
+	animation-name: opa1;	/*keyframes.cssで使う@keyframesの指定*/
+	animation-duration: 1S;	/*アニメーションの実行時間*/
+	animation-fill-mode: both;	/*アニメーションの待機中は最初のキーフレームを維持、終了後は最後のキーフレームを維持。*/
+}
 /*マウスオン時*/
 body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
 	background: #999;	/*背景色*/
 }
-
+body.is-fixed-pagetop .nav-fix-pos-request a:hover {
+	background: #999;	/*背景色*/
+}
 /*ul.disc,olタグ
 ---------------------------------------------------------------------------*/
 ul.disc {
