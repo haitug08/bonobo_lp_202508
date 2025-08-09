@@ -353,3 +353,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+var requestTop = $('.request').offset().top;
+function scrollFixTop() {
+  var scroll = $(window).scrollTop();
+  if(scroll >= requestTop) {
+    $('.request').addClass('fix');
+  } else {
+    if($('.request').hasClass('fix')) {
+      $('.request').removeClass('fix');
+    }
+  }
+};
+$(window).scroll(function (){
+  scrollFixTop();
+});
