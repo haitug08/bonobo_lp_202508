@@ -607,12 +607,14 @@ ul.icon img:hover {
     padding: 5px;
     color: #00A0BD;
     text-align: left;
+	font-size: medium;
 }
 /*ta2テーブル*/
 .ta2 {   
 	width: 1000px;
     table-layout: fixed;
     margin: auto;
+	font-size: small;
 }
 .ta2, .ta2 td, .ta2 th {
 	border: 1px solid #8D98B2;
@@ -630,6 +632,13 @@ ul.icon img:hover {
     background-color: #f3f3f3;
     border-top: none;
 }
+.ta2 ul {
+	list-style-type: disc;
+}
+.ta2 li {
+	font-size: small;
+}
+
 
 /*checkブロック。赤い注意書きブロックです。
 ---------------------------------------------------------------------------*/
