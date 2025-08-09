@@ -599,6 +599,34 @@ ul.icon img:hover {
 	font-weight: normal;
 }
 
+/*ta2設定
+---------------------------------------------------------------------------*/
+/*テーブル１行目に入った見出し部分（※caption）*/
+.ta2 caption {
+	border: 1px solid #8D98B2;	/*テーブルの枠線の幅、線種、色*/
+	border-bottom: none;	/*下線だけ消す*/
+	text-align: left;		/*文字を左寄せ*/
+	font-weight: bold;		/*太字に*/
+	padding: 15px 10px;		/*上下、左右へのボックス内の余白*/
+}
+/*ta2テーブル*/
+.ta2 {
+	max-width: 800px;
+	table-layout: fixed;
+	margin: auto;
+}
+.ta2, .ta2 td, .ta2 th {
+	border: 1px solid  #8D98B2;	/*テーブルの枠線の幅、線種、色*/
+	padding: 15px 10px;		/*上下、左右へのボックス内の余白*/
+	word-break: break-all;
+}
+/*左側ボックス*/
+.ta2 th {
+	width: 150px;	/*幅*/
+	text-align: center;	/*センタリング*/
+	font-weight: normal;
+}
+
 /*checkブロック。赤い注意書きブロックです。
 ---------------------------------------------------------------------------*/
 p.check {
