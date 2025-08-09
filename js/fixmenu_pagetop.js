@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const offsetTop = 700;
+  const offsetTop = 2000;
   const hysteresis = 50;
 
   window.addEventListener('scroll', () => {
