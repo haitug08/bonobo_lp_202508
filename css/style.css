@@ -645,7 +645,7 @@ body.is-fixed-pagetop .nav-fix-pos-pagetop a {
 	animation-duration: 1S;	/*アニメーションの実行時間*/
 	animation-fill-mode: both;	/*アニメーションの待機中は最初のキーフレームを維持、終了後は最後のキーフレームを維持。*/
 }
-body.is-fixed-pagetop .nav-fix-pos-request a {    
+body.is-fixed-request .nav-fix-pos-request a {    
 	display: block;
     text-decoration: none;
     text-align: center;
@@ -670,7 +670,7 @@ body.is-fixed-pagetop .nav-fix-pos-request a {
 body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
 	background: #999;	/*背景色*/
 }
-body.is-fixed-pagetop .nav-fix-pos-request a:hover {
+body.is-fixed-request .nav-fix-pos-request a:hover {
 	background: #00A0BD;
 	color: #ffffff;
 	border: 2px solid #ffffff;
