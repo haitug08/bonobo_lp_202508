@@ -12,3 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const offsetTop = 700;
+  const hysteresis = 50;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+
+    if (scrollTop > offsetTop) {
+      document.body.classList.add('is-fixed-request');
+    } else if (scrollTop < offsetTop - hysteresis) {
+      document.body.classList.remove('is-fixed-request');
+    }
+  });
+});
+
