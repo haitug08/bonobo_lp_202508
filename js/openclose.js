@@ -369,3 +369,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.querySelectorAll('[id^=open]').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.add('modal-open');
+  });
+});
+
+document.querySelectorAll('.close-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    document.body.classList.remove('modal-open');
+  });
+});
+
