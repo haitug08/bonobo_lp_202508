@@ -758,6 +758,25 @@ body.is-fixed-head .nav-fix-pos-head li{
   list-style: none;
   margin-left: 20px;
 }
+body.is-fixed-head .nav-fix-pos-head .request {    
+	display: block;
+    text-decoration: none;
+    text-align: center;
+    width: 170px;
+    line-height: 20px;
+    z-index: 1;
+    position: fixed;
+    background: #ffffff;
+    color: #00A0BD;
+    border: 2px solid #00A0BD;
+    animation-name: opa1;
+    animation-duration: 1S;
+    animation-fill-mode: both;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 10px;
+}
+
 
 /*マウスオン時*/
 body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
