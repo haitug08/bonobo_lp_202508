@@ -261,6 +261,7 @@ header .wrap {
 .img_01 {
 	display: block;
 	margin: auto;
+	padding-top: 800px;
 }
 
 .img_02 {
