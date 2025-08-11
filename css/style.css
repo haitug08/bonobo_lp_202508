@@ -742,7 +742,7 @@ body.is-fixed-head .nav-fix-pos-head a{
 	display: flex;
     text-decoration: none;
     background: #ffffff;
-    color: #00A0BD;
+    color: #000000;
     animation-name: opa1;
     animation-duration: 1S;
     animation-fill-mode: both;
@@ -772,8 +772,7 @@ body.is-fixed-request .nav-fix-pos-request a:hover {
 	border: 2px solid #ffffff;
 }
 body.is-fixed-head .nav-fix-pos-head a:hover {
-	background: #00A0BD;
-	color: #ffffff;
+	color: #00A0BD;
 }
 
 /*ul.disc,olタグ
