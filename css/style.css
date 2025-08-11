@@ -737,7 +737,7 @@ body.is-fixed-head .nav-fix-pos-head hi{
     width: 200px;
 }
 
-body.is-fixed-head .nav-fix-pos-head li{
+body.is-fixed-head .nav-fix-pos-head a{
     text-decoration: none;
     background: #ffffff;
     color: #00A0BD;
@@ -745,6 +745,12 @@ body.is-fixed-head .nav-fix-pos-head li{
     animation-duration: 1S;
     animation-fill-mode: both;
     font-weight: bold;
+	margin: 10px;
+	padding:10px;
+}
+
+
+body.is-fixed-head .nav-fix-pos-head li{
 }
 
 /*マウスオン時*/
