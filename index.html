@@ -491,6 +491,19 @@ open_close("menubar_hdr", "menubar");
 -->
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
+<script>
+  const query = window.location.search;
+  const origin = window.location.origin; // 例: https://staging.asiro-ssi.com
 
+  // initページへのリンク
+  document.querySelectorAll('.link-to-init').forEach(el => {
+    el.href = origin + "/form/init" + query;
+  });
+
+  // material_downloadページへのリンク
+  document.querySelectorAll('.link-to-material').forEach(el => {
+    el.href = origin + "/material_download" + query;
+  });
+</script>
 </body>
 </html>
