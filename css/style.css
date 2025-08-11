@@ -715,7 +715,7 @@ body.is-fixed-request .nav-fix-pos-request a {
     font-weight: bold;
     padding: 10px;
 }
-body.is-fixed-head .nav-fix-pos-head {    
+body.is-fixed-head .nav-fix-pos-head {
 	display: flex;
     text-decoration: none;
     text-align: center;
@@ -726,12 +726,13 @@ body.is-fixed-head .nav-fix-pos-head {
     top: 0px;
     left: 0%;
     background: #ffffff;
-    color: #00A0BD;
+    color: #000000;
     animation-name: opa1;
     animation-duration: 1S;
     animation-fill-mode: both;
     font-weight: bold;
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 body.is-fixed-head .nav-fix-pos-head h1{
     width: 200px;
