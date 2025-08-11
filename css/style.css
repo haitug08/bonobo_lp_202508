@@ -716,7 +716,7 @@ body.is-fixed-request .nav-fix-pos-request a {
     padding: 10px;
 }
 body.is-fixed-head .nav-fix-pos-head {    
-	display: block;
+	display: flex;
     text-decoration: none;
     text-align: center;
     width: 100%;
