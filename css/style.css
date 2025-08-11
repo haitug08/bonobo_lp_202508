@@ -705,7 +705,6 @@ body.is-fixed-request .nav-fix-pos-request a {
     position: fixed;
     bottom: 20px;
     left: 3%;
-    /* background: #666; */
     background: #ffffff;
     color: #00A0BD;
     border: 2px solid #00A0BD;
@@ -737,15 +736,12 @@ body.is-fixed-head .nav-fix-pos-head {
 
 body.is-fixed-head .nav-fix-pos-head a{
     text-decoration: none;
-    text-align: center;
-    position: fixed;
     background: #ffffff;
     color: #00A0BD;
     animation-name: opa1;
     animation-duration: 1S;
     animation-fill-mode: both;
     font-weight: bold;
-    padding: 20px;
 }
 
 /*マウスオン時*/
