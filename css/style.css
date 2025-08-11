@@ -1065,3 +1065,9 @@ header .btn_2 {
   right: 0;
   z-index: 999;
 }
+
+
+#01, #02, #03 {
+  padding-top: 60px;
+  margin-top: -60px
+}
