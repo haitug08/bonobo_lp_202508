@@ -674,6 +674,8 @@ p.check a {color: #fff;}
 /*通常時のボタンは非表示*/
 body .nav-fix-pos-pagetop a {display: none;}
 body .nav-fix-pos-request a {display: none;}
+body .nav-fix-pos-head a {display: none;}
+
 /*fixmenu_pagetop.jsで設定している設定値になったら出現するボタンスタイル*/
 body.is-fixed-pagetop .nav-fix-pos-pagetop a {
 	display: block;
@@ -714,6 +716,26 @@ body.is-fixed-request .nav-fix-pos-request a {
     font-weight: bold;
     padding: 10px;
 }
+body.is-fixed-request .nav-fix-pos-head a {    
+	display: block;
+    text-decoration: none;
+    text-align: center;
+    width: 1700px;
+    line-height: 20px;
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    background: #ffffff;
+    color: #00A0BD;
+    border: 2px solid #00A0BD;
+    animation-name: opa1;
+    animation-duration: 1S;
+    animation-fill-mode: both;
+    font-weight: bold;
+    padding: 10px;
+}
+
 /*マウスオン時*/
 body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
 	background: #999;	/*背景色*/
@@ -723,6 +745,12 @@ body.is-fixed-request .nav-fix-pos-request a:hover {
 	color: #ffffff;
 	border: 2px solid #ffffff;
 }
+body.is-fixed-request .nav-fix-pos-head a:hover {
+	background: #00A0BD;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+}
+
 /*ul.disc,olタグ
 ---------------------------------------------------------------------------*/
 ul.disc {
