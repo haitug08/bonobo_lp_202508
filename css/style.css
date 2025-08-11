@@ -777,10 +777,12 @@ body.is-fixed-head .nav-fix-pos-head .init:hover {
 	border: 2px solid #ffffff;
 }
 /* モーダル表示時に固定ナビ・ページトップボタンを隠す */
-body.modal-open .nav-fix-pos-pagetop,
-body.modal-open .nav-fix-pos-head {
+/* モーダル表示中は nav-fix-pos 系を隠す */
+body.modal-open.is-fixed-pagetop .nav-fix-pos-pagetop a,
+body.modal-open.is-fixed-head .nav-fix-pos-head {
   display: none !important;
 }
+
 
 /*ul.disc,olタグ
 ---------------------------------------------------------------------------*/
