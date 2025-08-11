@@ -733,6 +733,9 @@ body.is-fixed-head .nav-fix-pos-head {
     font-weight: bold;
     padding: 20px;
 }
+body.is-fixed-head .nav-fix-pos-head hi{
+    width: 200px;
+}
 
 body.is-fixed-head .nav-fix-pos-head li{
     text-decoration: none;
