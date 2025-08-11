@@ -673,7 +673,6 @@ p.check a {color: #fff;}
 ---------------------------------------------------------------------------*/
 /*通常時のボタンは非表示*/
 body .nav-fix-pos-pagetop a {display: none;}
-body .nav-fix-pos-request a {display: none;}
 body .nav-fix-pos-head {display: none;}
 
 /*fixmenu_pagetop.jsで設定している設定値になったら出現するボタンスタイル*/
@@ -695,26 +694,7 @@ body.is-fixed-pagetop .nav-fix-pos-pagetop a {
 	animation-duration: 1S;	/*アニメーションの実行時間*/
 	animation-fill-mode: both;	/*アニメーションの待機中は最初のキーフレームを維持、終了後は最後のキーフレームを維持。*/
 }
-body.is-fixed-request .nav-fix-pos-request a {    
-	display: block;
-    text-decoration: none;
-    text-align: center;
-    width: 170px;
-    line-height: 20px;
-    z-index: 1;
-    position: fixed;
-    bottom: 20px;
-    left: 3%;
-    background: #ffffff;
-    color: #00A0BD;
-    border: 2px solid #00A0BD;
-    animation-name: opa1;
-    animation-duration: 1S;
-    animation-fill-mode: both;
-    border-radius: 50px;
-    font-weight: bold;
-    padding: 10px;
-}
+
 body.is-fixed-head .nav-fix-pos-head {
 	display: flex;
     text-decoration: none;
@@ -767,20 +747,29 @@ body.is-fixed-head .nav-fix-pos-head .request {
     border: 2px solid #00A0BD;
     border-radius: 50px;
 }
-
+body.is-fixed-head .nav-fix-pos-head .init {
+	display: block;
+    text-align: center;
+    width: 170px;
+    background: #ffffff;
+    color: #00A0BD;
+    border: 2px solid #00A0BD;
+    border-radius: 50px;
+}
 /*マウスオン時*/
 body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
 	background: #999;	/*背景色*/
 }
-body.is-fixed-request .nav-fix-pos-request a:hover {
-	background: #00A0BD;
-	color: #ffffff;
-	border: 2px solid #ffffff;
-}
+
 body.is-fixed-head .nav-fix-pos-head a:hover {
 	color: #00A0BD;
 }
 body.is-fixed-head .nav-fix-pos-head .request:hover {
+	background: #00A0BD;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+}
+body.is-fixed-head .nav-fix-pos-head .init:hover {
 	background: #00A0BD;
 	color: #ffffff;
 	border: 2px solid #ffffff;
