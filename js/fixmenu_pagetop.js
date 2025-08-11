@@ -28,3 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const offsetTop = 350;
+  const hysteresis = 50;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+
+    if (scrollTop > offsetTop) {
+      document.body.classList.add('is-fixed-head');
+    } else if (scrollTop < offsetTop - hysteresis) {
+      document.body.classList.remove('is-fixed-head');
+    }
+  });
+});
