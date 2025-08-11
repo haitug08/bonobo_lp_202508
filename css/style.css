@@ -749,9 +749,16 @@ body.is-fixed-head .nav-fix-pos-head a{
 	margin: 10px;
 	padding:10px;
 }
-
-
+body.is-fixed-head .nav-fix-pos-head nav{
+  width: 500px;
+  background-color: greenyellow;
+}
+body.is-fixed-head .nav-fix-pos-head ul{
+ display: flex;
+}
 body.is-fixed-head .nav-fix-pos-head li{
+  list-style: none;
+  margin-left: 20px;
 }
 
 /*マウスオン時*/
