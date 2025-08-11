@@ -776,12 +776,7 @@ body.is-fixed-head .nav-fix-pos-head .init:hover {
 	color: #ffffff;
 	border: 2px solid #ffffff;
 }
-/* モーダル表示時に固定ナビ・ページトップボタンを隠す */
-/* モーダル表示中は nav-fix-pos 系を隠す */
-body.modal-open.is-fixed-pagetop .nav-fix-pos-pagetop a,
-body.modal-open.is-fixed-head .nav-fix-pos-head {
-  display: none !important;
-}
+
 
 
 /*ul.disc,olタグ
@@ -1021,6 +1016,24 @@ header .btn_2 {
   }
 }
 
+/*opa1（透明から着色状態に）
+---------------------------------------------------------------------------*/
+@keyframes opa1 {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+/*opa2（透明から着色状態に＆下からフェードイン）
+---------------------------------------------------------------------------*/
+@keyframes opa2 {
+	0% {opacity: 0;top: 10px;}
+	100% {opacity: 1;top: 0px;}
+}
+
+@keyframes animationZoom1 {
+100% { transform: scale(1.3)}
+}
+
 .mov_1 {
     width: 100%;
     height: 300px;
@@ -1076,7 +1089,15 @@ header .btn_2 {
 }
 
 
-01, 02, 03 {
+#01, #02, #03 {
   padding-top: 60px;
   margin-top: -60px
+}
+
+
+/* モーダル表示時に固定ナビ・ページトップボタンを隠す */
+/* モーダル表示中は nav-fix-pos 系を隠す */
+body.modal-open.is-fixed-pagetop .nav-fix-pos-pagetop a,
+body.modal-open.is-fixed-head .nav-fix-pos-head {
+  display: none !important;
 }
