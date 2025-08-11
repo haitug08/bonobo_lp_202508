@@ -734,7 +734,7 @@ body.is-fixed-head .nav-fix-pos-head {
     padding: 20px;
 }
 
-body.is-fixed-head .nav-fix-pos-head a{
+body.is-fixed-head .nav-fix-pos-head li{
     text-decoration: none;
     background: #ffffff;
     color: #00A0BD;
