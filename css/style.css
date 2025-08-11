@@ -267,6 +267,7 @@ header .wrap {
 	display: block;    
 	width: 560px;
 	height: 400px;
+	padding-top: 30px;
 }
 
 .img_03 {
@@ -475,7 +476,7 @@ header .wrap {
 
 .box {    
 	width: 40%;
-	margin: 0 3%;
+	margin: 0;
 }
 
 .box_2 {    
