@@ -732,7 +732,20 @@ body.is-fixed-head .nav-fix-pos-head {
     animation-duration: 1S;
     animation-fill-mode: both;
     font-weight: bold;
-    padding: 10px;
+    padding: 20px;
+}
+
+body.is-fixed-head .nav-fix-pos-head a{
+    text-decoration: none;
+    text-align: center;
+    position: fixed;
+    background: #ffffff;
+    color: #00A0BD;
+    animation-name: opa1;
+    animation-duration: 1S;
+    animation-fill-mode: both;
+    font-weight: bold;
+    padding: 20px;
 }
 
 /*マウスオン時*/
@@ -744,7 +757,7 @@ body.is-fixed-request .nav-fix-pos-request a:hover {
 	color: #ffffff;
 	border: 2px solid #ffffff;
 }
-body.is-fixed-head .nav-fix-pos-head:hover {
+body.is-fixed-head .nav-fix-pos-head a:hover {
 	background: #00A0BD;
 	color: #ffffff;
 }
