@@ -388,8 +388,9 @@ header .wrap {
 .txt_07 {
     text-align: left;
     color: #000000;
-    margin: 30px;
+    margin: auto;
     padding: 0px;
+    max-width: 800px;
 }
 
 .txt_08 {
