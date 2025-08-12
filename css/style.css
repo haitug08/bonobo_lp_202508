@@ -928,7 +928,6 @@ header .btn_2 {
   background-color: rgba(0,0,0,0.5);
   justify-content: center;
   align-items: center;
-  /* ぼかし効果の追加 */
   backdrop-filter: blur(8px);
 }
 
