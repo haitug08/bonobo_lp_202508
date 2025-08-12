@@ -840,12 +840,12 @@ header #logo {
 }
 header .btn_1 {
 	left: 30%;	/*左からの配置場所*/
-	width: 20%;	/*幅*/
+	width: 90%;	/*幅*/
 	top: 40%;	/*上からの配置場所*/
 }
 header .btn_2 {
 	left: 55%;	/*左からの配置場所*/
-	width: 20%;	/*幅*/
+	width: 90%;	/*幅*/
 	top: 50%;	/*上からの配置場所*/
 }
 .home header .btn_1 {
