@@ -466,6 +466,14 @@ header .wrap {
 	border-radius: 10px;
 }
 
+.wrap_05 {
+	display: contents;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 5%;
+	padding: 0 5%;
+}
+
 
 .box {    
 	width: 40%;
