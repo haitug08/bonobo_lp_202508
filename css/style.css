@@ -892,6 +892,9 @@ header .btn_2 {
 
 /*その他
 ---------------------------------------------------------------------------*/
+.txt_01 {
+    text-align: left;
+}	
 .bg_01 {
     height: auto;
 }
@@ -900,6 +903,7 @@ header .btn_2 {
 }	
 .img_01 {
     max-width: 80%;
+	padding-top: 40px;
 }
 .img_02 {
     height: auto;
@@ -913,6 +917,10 @@ header .btn_2 {
 }
 .img_06 {
     height: auto;	
+}
+.img_11 {
+    padding-top: 50px;
+    width: auto;
 }	
 .wrap {
     padding: 0;
