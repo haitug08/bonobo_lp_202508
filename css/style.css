@@ -894,12 +894,22 @@ header .btn_2 {
 ---------------------------------------------------------------------------*/
 .bg_01 {
     height: auto;
+}
+.bg_02 {
+    padding-bottom: 0;
 }	
 .img_01 {
     max-width: 90%;
 }
 .img_02 {
     height: auto;
+}
+.img_03 {
+    padding-top: 50px;
+    width: 80%;
+}	
+.img_05 {
+    margin: 20px 0;
 }	
 .wrap {
     padding: 0;
