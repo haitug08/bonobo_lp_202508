@@ -297,7 +297,7 @@ header .wrap {
 
 .img_07 {
 	width: auto;
-	height: 100%;
+    height: 55vh;
 	display: inline-block;
 	transition-duration: .4s;
 }
