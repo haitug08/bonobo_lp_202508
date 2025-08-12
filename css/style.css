@@ -926,6 +926,9 @@ header .btn_2 {
 .img_06 {
     height: auto;	
 }
+.img_08 {
+    display: block;
+}	
 .img_11 {
     padding-top: 50px;
     width: auto;
@@ -965,6 +968,11 @@ body.is-fixed-head .nav-fix-pos-head {
 .pc {display:none;}
 
 }
+
+.modal-content {
+    width: 65%;
+}
+
 
 /*モーダル
 ---------------------------------------------------------------------------*/
