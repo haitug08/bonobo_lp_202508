@@ -942,6 +942,8 @@ header .btn_2 {
 }
 .box_2 {
     width: 90%;
+	border: none;
+    box-shadow: none;
 }	
 .br-pc {
     display: none;
