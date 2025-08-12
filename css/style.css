@@ -939,6 +939,23 @@ header .btn_2 {
 .box {
     width: 90%;
 }
+
+.br-pc {
+    display: none;
+}
+.br-sp {
+    display: inline-block;
+}
+.pc-img {
+    display: none;
+}
+.sp-img {
+    display: block;
+	width: 100%;
+}
+body.is-fixed-head .nav-fix-pos-head {
+    display: none !important;
+}
 	
 .ws,.wl {width: 94%;}
 .w48p {width: 100%;}
@@ -1142,6 +1159,10 @@ header .btn_2 {
   margin-top: -60px
 }
 
+.br-sp {
+  display: none;
+}
+
 
 /* モーダル表示時に固定ナビ・ページトップボタンを隠す */
 /* モーダル表示中は nav-fix-pos 系を隠す */
@@ -1151,23 +1172,6 @@ body.modal-open.is-fixed-head .nav-fix-pos-head {
 }
 
 
-.br-sp {
-  display: none;
-}
 
-@media screen and (max-width: 768px) {
-  .br-pc {
-    display: none;
-  }
-  .br-sp {
-    display: inline-block;
-  }
-  .pc-img {
-    display: none;
-  }
-  .sp-img {
-    display: block;
-	width: 100%;
-  }
-}
+
 
