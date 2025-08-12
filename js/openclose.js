@@ -161,15 +161,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const openPlanModalBtn = document.getElementById('openPlanModal');
   const modal = document.getElementById('plan');
   const closeBtn = modal.querySelector('.close-btn');
-  const iframe = modal.querySelector('iframe');
 
   openPlanModalBtn.addEventListener('click', function(e) {
     e.preventDefault();
     modal.style.display = 'flex';
     modal.classList.add('open');
-
-    const originalSrc = iframe.src;
-    iframe.src = originalSrc;
   });
 
   function closeModal() {
