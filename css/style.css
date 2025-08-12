@@ -121,6 +121,10 @@ header .wrap {
 	animation: animationZoom1 20s ease-in-out forwards;
 }
 
+.pc-img {
+  width: 100%;
+}
+
 .sp-img {
   display: none;
 }
