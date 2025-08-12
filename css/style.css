@@ -899,7 +899,7 @@ header .btn_2 {
     padding-bottom: 0;
 }	
 .img_01 {
-    max-width: 90%;
+    max-width: 80%;
 }
 .img_02 {
     height: auto;
@@ -910,10 +910,16 @@ header .btn_2 {
 }	
 .img_05 {
     margin: 20px 0;
+}
+.img_06 {
+    height: auto;	
 }	
 .wrap {
     padding: 0;
 }
+.wrap_02 {
+    padding: 0;
+}	
 .box {
     width: 90%;
 }
