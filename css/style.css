@@ -895,11 +895,12 @@ header .btn_2 {
 .img_01 {
     max-width: 90%;
 }
-
+.img_02 {
+    height: auto;
+}	
 .wrap {
     padding: 0;
 }
-
 .box {
     width: 90%;
 }
