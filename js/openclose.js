@@ -199,15 +199,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const openService1ModalBtn = document.getElementById('openService1Modal');
   const modal = document.getElementById('service1');
   const closeBtn = modal.querySelector('.close-btn');
-  const iframe = modal.querySelector('iframe');
 
   openService1ModalBtn.addEventListener('click', function(e) {
     e.preventDefault();
     modal.style.display = 'flex';
     modal.classList.add('open');
-
-    const originalSrc = iframe.src;
-    iframe.src = originalSrc;
   });
 
   function closeModal() {
@@ -237,15 +233,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const openService2ModalBtn = document.getElementById('openService2Modal');
   const modal = document.getElementById('service2');
   const closeBtn = modal.querySelector('.close-btn');
-  const iframe = modal.querySelector('iframe');
 
   openService2ModalBtn.addEventListener('click', function(e) {
     e.preventDefault();
     modal.style.display = 'flex';
     modal.classList.add('open');
-
-    const originalSrc = iframe.src;
-    iframe.src = originalSrc;
   });
 
   function closeModal() {
@@ -275,15 +267,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const openService3ModalBtn = document.getElementById('openService3Modal');
   const modal = document.getElementById('service3');
   const closeBtn = modal.querySelector('.close-btn');
-  const iframe = modal.querySelector('iframe');
 
   openService3ModalBtn.addEventListener('click', function(e) {
     e.preventDefault();
     modal.style.display = 'flex';
     modal.classList.add('open');
-
-    const originalSrc = iframe.src;
-    iframe.src = originalSrc;
   });
 
   function closeModal() {
@@ -313,15 +301,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const openService4ModalBtn = document.getElementById('openService4Modal');
   const modal = document.getElementById('service4');
   const closeBtn = modal.querySelector('.close-btn');
-  const iframe = modal.querySelector('iframe');
 
   openService4ModalBtn.addEventListener('click', function(e) {
     e.preventDefault();
     modal.style.display = 'flex';
     modal.classList.add('open');
-
-    const originalSrc = iframe.src;
-    iframe.src = originalSrc;
   });
 
   function closeModal() {
@@ -351,15 +335,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const openService5ModalBtn = document.getElementById('openService5Modal');
   const modal = document.getElementById('service5');
   const closeBtn = modal.querySelector('.close-btn');
-  const iframe = modal.querySelector('iframe');
 
   openService5ModalBtn.addEventListener('click', function(e) {
     e.preventDefault();
     modal.style.display = 'flex';
     modal.classList.add('open');
-
-    const originalSrc = iframe.src;
-    iframe.src = originalSrc;
   });
 
   function closeModal() {
