@@ -835,7 +835,7 @@ html,body {
 }
 
 .mainimg {
-    width: 800px;
+    max-width: 768px;
 }
 	
 /*ヘッダー
@@ -1167,6 +1167,7 @@ body.modal-open.is-fixed-head .nav-fix-pos-head {
   }
   .sp-img {
     display: block;
+	width: 100%;
   }
 }
 
