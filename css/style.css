@@ -897,10 +897,15 @@ header .btn_2 {
 ---------------------------------------------------------------------------*/
 .txt_01 {
     text-align: left;
+}
+.txt_05 {
+    margin: 0;
+    padding:0;
 }	
 .bg_01 {
     height: auto;
 }
+	
 .bg_02 {
     padding-bottom: 0;
 }	
