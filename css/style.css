@@ -121,6 +121,10 @@ header .wrap {
 	animation: animationZoom1 20s ease-in-out forwards;
 }
 
+.sp-img {
+  display: none;
+}
+
 /*３本バーアイコン設定
 ---------------------------------------------------------------------------*/
 /*３本バーブロック*/
@@ -1151,9 +1155,14 @@ body.modal-open.is-fixed-head .nav-fix-pos-head {
   .br-pc {
     display: none;
   }
-
   .br-sp {
     display: inline-block;
+  }
+  .pc-img {
+    display: none;
+  }
+  .sp-img {
+    display: block;
   }
 }
 
