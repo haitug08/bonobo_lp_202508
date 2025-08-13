@@ -1042,20 +1042,20 @@ ol {
   right: 0;
   z-index: 999;
 }
-
-
 #01, #02, #03 {
   padding-top: 60px;
   margin-top: -60px
 }
-
 .br-sp {
   display: none;
 }
+.pc-hr {
+    display: block;
+}
+.sp-hr {
+	display: none;
+}
 
-
-/* モーダル表示時に固定ナビ・ページトップボタンを隠す */
-/* モーダル表示中は nav-fix-pos 系を隠す */
 body.modal-open.is-fixed-pagetop .nav-fix-pos-pagetop a,
 body.modal-open.is-fixed-head .nav-fix-pos-head {
   display: none !important;
