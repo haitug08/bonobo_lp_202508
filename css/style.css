@@ -1162,6 +1162,9 @@ header .btn_2 {
 }
 .wrap_02 {
     padding: 0;
+}
+.wrap_03 {
+	display: block;
 }	
 .wrap_04 {
     display: block;
