@@ -935,7 +935,8 @@ header .btn_2 {
 }	
 .img_11 {
     padding-top: 50px;
-    width: auto;
+    width: -webkit-fill-available;
+    margin: 15px;
 }	
 .wrap {
     padding: 0;
