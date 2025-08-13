@@ -831,6 +831,7 @@ html,body {
 
 .mainimg {
     max-width: 768px;
+	width: -webkit-fill-available;
 }
 	
 /*ヘッダー
