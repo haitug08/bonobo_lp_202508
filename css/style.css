@@ -77,21 +77,6 @@ header #logo {
 	left: 0;
 	margin: auto;
 }
-header .btn_1 {
-	z-index: 1;
-	transition-duration: .4s;
-}
-header .btn_1:hover {
-	transform: scale(1.1);
-}
-
-header .btn_2 {
-	z-index: 1;
-	transition-duration: .4s;
-}
-header .btn_2:hover {
-	transform: scale(1.1);
-}
 
 header .wrap {
 	display: flex;
@@ -235,6 +220,22 @@ body.modal-open .mainimg {
 }
 #contents section + section {
 	margin-top: 100px;
+}
+
+.btn_1 {
+	z-index: 1;
+	transition-duration: .4s;
+}
+.btn_1:hover {
+	transform: scale(1.1);
+}
+
+.btn_2 {
+	z-index: 1;
+	transition-duration: .4s;
+}
+.btn_2:hover {
+	transform: scale(1.1);
 }
 
 .bg_01 {
