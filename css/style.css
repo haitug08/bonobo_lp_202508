@@ -486,6 +486,13 @@ body.modal-open .mainimg {
 	margin: 0 5%;
 	padding: 0 5%;
 }
+.wrap_06 {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 5%;
+	padding: 5%;
+}
 
 
 .box {    
@@ -1168,7 +1175,12 @@ header .btn_2 {
 }	
 .wrap_04 {
     display: block;
-}	
+}
+.wrap_06 {    
+	padding: 0;
+	flex-direction: column;
+}
+	
 .box {
     width: 90%;
 }
