@@ -104,6 +104,7 @@ header .wrap {
 .mainimg {
 	clear: left;width: 100%;margin: 0 auto;position: relative;
 	animation: animationZoom1 20s ease-in-out forwards;
+	overflow: hidden;
 }
 body.modal-open .mainimg {
   animation: none !important;
