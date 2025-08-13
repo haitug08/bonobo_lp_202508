@@ -1275,7 +1275,10 @@ header .btn_2 {
   display: none;
 }
 .sp-img_02 {  
-	display: block;	        
+	display: block;
+	max-width: 70%;
+	margin: auto;    
+	padding: 30px;       
 }
 	
 .pc-hr {
