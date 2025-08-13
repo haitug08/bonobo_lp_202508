@@ -1187,7 +1187,7 @@ header .btn_2 {
     width: -webkit-fill-available;
     margin: 15px;
 }
-.img_11 {
+.img_12 {
 	max-width: 80%;
 }
 .img_13 {
@@ -1234,6 +1234,14 @@ header .btn_2 {
     display: block;
 	width: 100%;
 }
+.pc-hr {
+    display: none;
+}
+.sp-hr {
+    display: block;
+}
+
+	
 body.is-fixed-head .nav-fix-pos-head {
     display: none !important;
 }
