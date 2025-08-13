@@ -659,49 +659,6 @@ ul.icon img:hover {
   font-size: small;
 }
 
-/* -------------------------------------------
-  レスポンシブ対応
-------------------------------------------- */
-@media screen and (max-width: 768px) {
-  .ta2,
-  .ta2 tbody,
-  .ta2 tr,
-  .ta2 th,
-  .ta2 td {
-    /* テーブルを1列にするための設定 */
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .ta2 {
-    /* PCでのwidth指定をリセット */
-    width: 100%;
-  }
-
-  .ta2 th,
-  .ta2 td {
-    /* 行ごとのボーダーを上下に表示 */
-    border-top: 1px solid #8D98B2;
-    border-bottom: 1px solid #8D98B2;
-    /* 左右のボーダーを非表示 */
-    border-left: none;
-    border-right: none;
-  }
-  
-  .ta2 th {
-    /* thの背景色を変更 */
-    background-color: #f3f3f3;
-    /* thの幅をリセット */
-    width: auto;
-  }
-
-  .ta2 tr {
-    /* セルの間にスペースを追加 */
-    margin-bottom: 15px;
-  }
-}
-
 
 /*checkブロック。赤い注意書きブロックです。
 ---------------------------------------------------------------------------*/
@@ -864,176 +821,6 @@ ol {
 .fr {float: right;}
 .sh {display: none;}
 .ofh {overflow: hidden;}
-
-
-
-
-
-/*画面幅768px以下の設定
-------------------------------------------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width:768px){
-
-/*全体の設定
----------------------------------------------------------------------------*/
-html,body {
-	font-size: 12px;	/*画面幅480px以下で閲覧した際の文字サイズ。*/
-}
-
-.mainimg {
-    max-width: 768px;
-	width: -webkit-fill-available;
-}
-	
-/*ヘッダー
----------------------------------------------------------------------------*/
-/*ロゴ画像*/
-header #logo {
-	left: 0%;	/*左からの配置場所*/
-	width: 40%;	/*幅*/
-	top: 40%;	/*上からの配置場所*/
-}
-header .btn_1 {
-	left: 30%;	/*左からの配置場所*/
-	width: 90%;	/*幅*/
-	top: 40%;	/*上からの配置場所*/
-}
-header .btn_2 {
-	left: 55%;	/*左からの配置場所*/
-	width: 90%;	/*幅*/
-	top: 50%;	/*上からの配置場所*/
-}
-.home header .btn_1 {
-	top: 95%;
-}
-.home header .btn_2 {
-	top: 95%;
-}
-	
-	
-/*３本バーアイコン設定
----------------------------------------------------------------------------*/
-/*３本バーブロック*/
-#menubar_hdr {
-	top: 30px;	/*上からの配置場所*/
-	left: 0%;	/*左からの配置場所*/
-}
-
-/*コンテンツ
----------------------------------------------------------------------------*/
-#contents {
-    padding: 10px 0px;
-}
-	
-/*h2タグ*/
-#contents h2 {
-	margin-bottom: 30px;
-}
-/*他、微調整*/
-#contents section + section {
-	margin-top: 50px;
-}
-
-/*テーブル（ta1）
----------------------------------------------------------------------------*/
-/*ta1設定*/
-.ta1, .ta1 td, .ta1 th {
-	padding: 5px;	/*ボックス内の余白*/
-}
-/*ta1の左側ボックス*/
-.ta1 th {
-	width: 100px;
-}
-
-/*その他
----------------------------------------------------------------------------*/
-.txt_01 {
-    text-align: left;
-}
-.txt_05 {
-    margin: 0;
-    padding: 0 0 20px 0;
-}
-.txt_06 {
-    padding: 0 0 20px 0;
-}	
-.bg_01 {
-    height: auto;
-}
-	
-.bg_02 {
-    padding-bottom: 0;
-}	
-.img_01 {
-    max-width: 80%;
-	padding-top: 40px;
-}
-.img_02 {
-    height: auto;
-}
-.img_03 {
-    padding-top: 50px;
-    width: 80%;
-}	
-.img_05 {
-    margin: 20px 0;
-}
-.img_06 {
-    height: auto;	
-}
-.img_08 {
-    display: block;
-}	
-.img_11 {
-    padding-top: 50px;
-    width: -webkit-fill-available;
-    margin: 15px;
-}	
-.wrap {
-    padding: 0;
-}
-.wrap_02 {
-    padding: 0;
-}	
-.wrap_04 {
-    display: block;
-}	
-.box {
-    width: 90%;
-}
-.box_2 {
-    width: 90%;
-	border: none;
-    box-shadow: none;
-}	
-.br-pc {
-    display: none;
-}
-.br-sp {
-    display: inline-block;
-}
-.pc-img {
-    display: none;
-}
-.sp-img {
-    display: block;
-	width: 100%;
-}
-body.is-fixed-head .nav-fix-pos-head {
-    display: none !important;
-}
-	
-.ws,.wl {width: 94%;}
-.w48p {width: 100%;}
-.fl {float: none;}
-.fr {float: none;}
-.sh {display:block;}
-.pc {display:none;}
-
-}
-
-.modal-content {
-    width: 65%;
-}
 
 
 /*モーダル
@@ -1242,6 +1029,218 @@ body.modal-open.is-fixed-head .nav-fix-pos-head {
 }
 
 
+
+
+
+
+
+
+/*画面幅768px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:768px){
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+html,body {
+	font-size: 12px;	/*画面幅480px以下で閲覧した際の文字サイズ。*/
+}
+
+.mainimg {
+    max-width: 768px;
+	width: -webkit-fill-available;
+}
+	
+/*ヘッダー
+---------------------------------------------------------------------------*/
+/*ロゴ画像*/
+header #logo {
+	left: 0%;	/*左からの配置場所*/
+	width: 40%;	/*幅*/
+	top: 40%;	/*上からの配置場所*/
+}
+header .btn_1 {
+	left: 30%;	/*左からの配置場所*/
+	width: 90%;	/*幅*/
+	top: 40%;	/*上からの配置場所*/
+}
+header .btn_2 {
+	left: 55%;	/*左からの配置場所*/
+	width: 90%;	/*幅*/
+	top: 50%;	/*上からの配置場所*/
+}
+.home header .btn_1 {
+	top: 95%;
+}
+.home header .btn_2 {
+	top: 95%;
+}
+	
+	
+/*３本バーアイコン設定
+---------------------------------------------------------------------------*/
+/*３本バーブロック*/
+#menubar_hdr {
+	top: 30px;	/*上からの配置場所*/
+	left: 0%;	/*左からの配置場所*/
+}
+
+/*コンテンツ
+---------------------------------------------------------------------------*/
+#contents {
+    padding: 10px 0px;
+}
+	
+/*h2タグ*/
+#contents h2 {
+	margin-bottom: 30px;
+}
+/*他、微調整*/
+#contents section + section {
+	margin-top: 50px;
+}
+
+/*テーブル（ta1）
+---------------------------------------------------------------------------*/
+/*ta1設定*/
+.ta1, .ta1 td, .ta1 th {
+	padding: 5px;	/*ボックス内の余白*/
+}
+/*ta1の左側ボックス*/
+.ta1 th {
+	width: 100px;
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+.txt_01 {
+    text-align: left;
+}
+.txt_05 {
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+.txt_06 {
+    padding: 0 0 20px 0;
+}	
+.bg_01 {
+    height: auto;
+}
+	
+.bg_02 {
+    padding-bottom: 0;
+}	
+.img_01 {
+    max-width: 80%;
+	padding-top: 40px;
+}
+.img_02 {
+    height: auto;
+}
+.img_03 {
+    padding-top: 50px;
+    width: 80%;
+}	
+.img_05 {
+    margin: 20px 0;
+}
+.img_06 {
+    height: auto;	
+}
+.img_08 {
+    display: block;
+}	
+.img_11 {
+    padding-top: 50px;
+    width: -webkit-fill-available;
+    margin: 15px;
+}	
+.wrap {
+    padding: 0;
+}
+.wrap_02 {
+    padding: 0;
+}	
+.wrap_04 {
+    display: block;
+}	
+.box {
+    width: 90%;
+}
+.box_2 {
+    width: 90%;
+	border: none;
+    box-shadow: none;
+}	
+.br-pc {
+    display: none;
+}
+.br-sp {
+    display: inline-block;
+}
+.pc-img {
+    display: none;
+}
+.sp-img {
+    display: block;
+	width: 100%;
+}
+body.is-fixed-head .nav-fix-pos-head {
+    display: none !important;
+}
+
+  .ta2,
+  .ta2 tbody,
+  .ta2 tr,
+  .ta2 th,
+  .ta2 td {
+    /* テーブルを1列にするための設定 */
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ta2 {
+    /* PCでのwidth指定をリセット */
+    width: 100%;
+  }
+
+  .ta2 th,
+  .ta2 td {
+    /* 行ごとのボーダーを上下に表示 */
+    border-top: 1px solid #8D98B2;
+    border-bottom: 1px solid #8D98B2;
+    /* 左右のボーダーを非表示 */
+    border-left: none;
+    border-right: none;
+  }
+  
+.ta2 th {
+    /* thの背景色を変更 */
+    background-color: #f3f3f3;
+    /* thの幅をリセット */
+    width: auto;
+  }
+
+.ta2 tr {
+    /* セルの間にスペースを追加 */
+    margin-bottom: 15px;
+  }
+.ta2 caption {
+    width: max-content;
+}
+
+.modal-content {
+    width: 65%;
+}
+		
+.ws,.wl {width: 94%;}
+.w48p {width: 100%;}
+.fl {float: none;}
+.fr {float: none;}
+.sh {display:block;}
+.pc {display:none;}
+
+}
 
 
 
