@@ -901,7 +901,10 @@ header .btn_2 {
 }
 .txt_05 {
     margin: 0;
-    padding:0;
+    padding: 0 0 20px 0;
+}
+.txt_06 {
+    padding: 0 0 20px 0;
 }	
 .bg_01 {
     height: auto;
