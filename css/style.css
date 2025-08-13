@@ -402,10 +402,13 @@ body.modal-open .mainimg {
     padding: 0px;
 }
 .txt_09 {
-    color: #00A0BD;
-	font-size: 1.3rem;
-	text-align: left;
-	display: inline-block;
+    color: #000000;
+    font-size: 1.6rem;
+    text-align: left;
+    display: inline-block;
+    font-weight: bold;
+    line-height: normal;
+    margin: 10px;
 }
 .txt_10 {
     margin: 16px auto;
@@ -1125,11 +1128,6 @@ header .btn_2 {
 }
 .txt_06 {
     padding: 0 0 20px 0;
-}
-.txt_09 {
-    text-align: left;
-    margin: 10px;
-    padding: 0;
 }	
 .bg_01 {
     height: auto;
