@@ -1161,6 +1161,7 @@ header .btn_2 {
 }
 .txt_06 {
     padding: 0 0 20px 0;
+	text-align: left;
 }	
 .bg_01 {
     height: auto;
