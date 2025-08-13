@@ -106,7 +106,7 @@ header .wrap {
 	animation: animationZoom1 20s ease-in-out forwards;
 }
 body.modal-open .mainimg {
-  animation: none;
+  animation: none !important;
 }
 .pc-img {
   width: 100%;
