@@ -116,6 +116,17 @@ body.modal-open .mainimg {
   display: none;
 }
 
+.pc-img_01 {
+	display: block;
+	margin: auto;
+	padding-top: 80px;
+}
+
+.sp-img_01 {
+  display: none;
+}
+
+
 /*３本バーアイコン設定
 ---------------------------------------------------------------------------*/
 /*３本バーブロック*/
@@ -1235,6 +1246,17 @@ header .btn_2 {
     display: block;
 	width: 100%;
 }
+
+.pc-img_01 {
+  display: none;
+}
+
+.sp-img_01 {  
+	max-width: 80%;
+	padding-top: 40px;
+}
+
+	
 .pc-hr {
     display: none;
 }
