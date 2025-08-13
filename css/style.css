@@ -1075,8 +1075,7 @@ header .btn_2 {
 .home header .btn_2 {
 	top: 95%;
 }
-	
-	
+		
 /*３本バーアイコン設定
 ---------------------------------------------------------------------------*/
 /*３本バーブロック*/
@@ -1095,7 +1094,6 @@ header .btn_2 {
 #contents h2 {
 	margin-bottom: 30px;
 }
-/*他、微調整*/
 #contents section + section {
 	margin-top: 50px;
 }
@@ -1126,7 +1124,6 @@ header .btn_2 {
 .bg_01 {
     height: auto;
 }
-	
 .bg_02 {
     padding-bottom: 0;
 }	
@@ -1188,44 +1185,35 @@ header .btn_2 {
 body.is-fixed-head .nav-fix-pos-head {
     display: none !important;
 }
-
-  .ta2,
-  .ta2 tbody,
-  .ta2 tr,
-  .ta2 th,
-  .ta2 td {
-    /* テーブルを1列にするための設定 */
+.ta2,
+.ta2 tbody,
+.ta2 tr,
+.ta2 th,
+.ta2 td {
     display: block;
     width: 100%;
     box-sizing: border-box;
-  }
-
-  .ta2 {
-    /* PCでのwidth指定をリセット */
+}
+.ta2 {
     width: 100%;
-  }
-
-  .ta2 th,
-  .ta2 td {
-    /* 行ごとのボーダーを上下に表示 */
+}
+ .ta2 th,
+ .ta2 td {
     border-top: 1px solid #8D98B2;
     border-bottom: 1px solid #8D98B2;
-    /* 左右のボーダーを非表示 */
     border-left: none;
     border-right: none;
-  }
-  
+}  
 .ta2 th {
     /* thの背景色を変更 */
     background-color: #f3f3f3;
     /* thの幅をリセット */
     width: auto;
-  }
-
+}
 .ta2 tr {
     /* セルの間にスペースを追加 */
     margin-bottom: 15px;
-  }
+}
 .ta2 caption {
     width: max-content;
 }
@@ -1233,7 +1221,11 @@ body.is-fixed-head .nav-fix-pos-head {
 .modal-content {
     width: 65%;
 }
-		
+
+.modal-scroll-area {
+    padding: 0;
+}
+
 .ws,.wl {width: 94%;}
 .w48p {width: 100%;}
 .fl {float: none;}
