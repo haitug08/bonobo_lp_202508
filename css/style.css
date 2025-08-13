@@ -1178,7 +1178,7 @@ header .btn_2 {
 }
 .wrap_06 {    
 	padding: 0;
-	flex-direction: column;
+	flex-direction: column-reverse;
 }
 	
 .box {
