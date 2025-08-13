@@ -120,11 +120,12 @@ header .wrap {
 	clear: left;width: 100%;margin: 0 auto;position: relative;
 	animation: animationZoom1 20s ease-in-out forwards;
 }
-
+body.modal-open .mainimg {
+  animation: none;
+}
 .pc-img {
   width: 100%;
 }
-
 .sp-img {
   display: none;
 }
