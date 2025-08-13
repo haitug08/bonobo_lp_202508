@@ -1119,6 +1119,11 @@ header .btn_2 {
 }
 .txt_06 {
     padding: 0 0 20px 0;
+}
+.txt_09 {
+    text-align: left;
+    margin: 10px;
+    padding: 0;
 }	
 .bg_01 {
     height: auto;
