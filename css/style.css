@@ -404,9 +404,15 @@ body.modal-open .mainimg {
 .txt_09 {
     color: #00A0BD;
 	font-size: 1.3rem;
-	text-align: center;
-	margin-top: 30px;
+	text-align: left;
+	display: inline-block;
 }
+.txt_10 {
+    margin: 16px auto;
+	text-align: center;
+	display: block;
+}
+
 .wrap {
 	display: flex;
 	justify-content: center;
