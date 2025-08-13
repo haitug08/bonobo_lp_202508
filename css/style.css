@@ -104,7 +104,6 @@ header .wrap {
 .mainimg {
 	clear: left;width: 100%;margin: 0 auto;position: relative;
 	animation: animationZoom1 20s ease-in-out forwards;
-	overflow: hidden;
 }
 body.modal-open .mainimg {
   animation: none !important;
@@ -990,6 +989,10 @@ ol {
 100% { transform: scale(1.3)}
 }
 
+@keyframes animationZoom2 {
+100% { transform: scale(1.1)}
+}
+
 .mov_1 {
     width: 100%;
     height: 300px;
@@ -1082,6 +1085,8 @@ html,body {
 .mainimg {
     max-width: 768px;
 	width: -webkit-fill-available;
+	animation: animationZoom2 20s ease-in-out forwards;
+}
 }
 	
 /*ヘッダー
