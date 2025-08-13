@@ -504,7 +504,13 @@ body.modal-open .mainimg {
 	margin: 0 5%;
 	padding: 5%;
 }
-
+.wrap_07 {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 5%;
+	padding: 5%;
+}
 
 .box {    
 	width: 40%;
@@ -1180,6 +1186,10 @@ header .btn_2 {
     padding-top: 50px;
     width: -webkit-fill-available;
     margin: 15px;
+}
+
+.img_13 {
+    width: fit-content;
 }	
 .wrap {
     padding: 0;
@@ -1197,6 +1207,10 @@ header .btn_2 {
 	padding: 0;
 	flex-direction: column-reverse;
 }
+.wrap_06 {
+	padding: 0;
+}
+	
 .box {
     width: 90%;
 }
