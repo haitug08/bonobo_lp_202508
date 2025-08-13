@@ -309,6 +309,7 @@ body.modal-open .mainimg {
     height: 60vh;
 	display: inline-block;
 	transition-duration: .4s;
+	max-width: fit-content;
 }
 
 .img_07:hover {
