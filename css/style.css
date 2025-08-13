@@ -351,7 +351,6 @@ body.modal-open .mainimg {
 	font-size: 1.2rem;
 	line-height: 2.5;
 }
-
 .txt_02 {
 	text-align: left;
 	color: #000000;
@@ -361,7 +360,6 @@ body.modal-open .mainimg {
 	margin: 30px;
 	padding: 0px;
 }
-
 .txt_03 {
 	text-align: center;
 	color: #000000;
@@ -370,7 +368,6 @@ body.modal-open .mainimg {
 	margin: 30px;
 	padding: 0px;
 }
-
 .txt_04 {
     text-align: left;
     color: #000000;
@@ -379,21 +376,18 @@ body.modal-open .mainimg {
     margin: 10px 30px;
     padding: 0px;
 }
-
 .txt_05 {
 	text-align: left;
     color: #000000;
     margin: 15px;
     padding: 10px 30px;
 }
-
 .txt_06 {
 	text-align: center;
     color: #00A0BD;
     font-weight: bold;
 	padding: 0 30px 30px 30px;
 }
-
 .txt_07 {
     text-align: left;
     color: #000000;
@@ -401,12 +395,17 @@ body.modal-open .mainimg {
     padding: 0px;
     max-width: 800px;
 }
-
 .txt_08 {
     text-align: left;
     color: #000000;
     margin: 10px;
     padding: 0px;
+}
+.txt_09 {
+    color: #00A0BD;
+	font-size: 1.3rem;
+	text-align: center;
+	margin-top: 30px;
 }
 .wrap {
 	display: flex;
