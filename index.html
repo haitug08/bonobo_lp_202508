@@ -479,32 +479,27 @@
     </section>
 
 <section>
-    <div class="intro1-ag-code">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <label for="agent_number">代理店番号：</label>
-                        <input id="agent_number" class="textbox-ag-number" name="agent_number" oninput="handleAgentInput()" pattern="^[A-Z0-9]+$" type="text" value="AG9999">
-                        <br>
-                        <p id="agent_name" class="ag_name mato-20 ma-bo15"></p>
-                        <small>
-                            <p id="agent_address" class="mato-5"></p>
-                        </small>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="intention-read" style="margin-top: 25px;">
-                            チラシをお持ちの場合、裏面の代理店番号が上記と一致しているかご確認ください。<br>
-                            異なる場合はチラシの番号をご入力ください。
-                        </p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>  
-</section>    
+<div class="intro1-ag-code">
+<table style="text-align: center;">
+<tbody>
+<tr>
+<td>
+<p>【募集代理店】</p>
+<p id="agent_name" class="ag_name mato-20 ma-bo15" style="margin-top: 5px;"></p>
+<small><p id="agent_address" class="mato-5"></p></small>
+<label for="agent_number">代理店番号：</label>
+<input id="agent_number" class="textbox-ag-number" name="agent_number" oninput="handleAgentInput()" pattern="^[A-Z0-9]+$" type="text" value="AG9999">
+</td>
+</tr>
+<tr>
+<td>
+<p class="intention-read" style="margin-top: 25px;">【引受保険会社】<br>株式会社アシロ少額短期保険</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>  
+</section>
     
   </div>
   <!--/#contents-->
