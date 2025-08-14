@@ -106,7 +106,7 @@
               徹底してお客様に寄り添い、事業形態と従業員規模に応じた<br class="br-pc">
               お求めやすくシンプルな保険料プラン設計を実現しております。
             </p>
-            <a href="#" class="btn_4" id="openPlanModal">保険料プランを見る</a>
+            <a href="#" class="btn_4 openPlanModal">保険料プランを見る</a>
 
             <div id="plan" class="modal">
               <div class="modal-content-plan">
@@ -467,6 +467,9 @@
       </div>
     </section>
 
+           <p><a href="#" class="openPlanModal">保険料プランを見る</a></p>
+
+    
     <section>
       <div class="wrap">
         <div class="btn_1">
@@ -526,45 +529,48 @@
       }
     });
 
-    // モーダルの開閉を制御する共通の関数
-    function setupModal(openBtnId, modalId) {
-      const openBtn = document.getElementById(openBtnId);
-      const modal = document.getElementById(modalId);
-      if (!openBtn || !modal) return;
+    setupModal('.openPlanModalBtn', 'plan'); 
+    setupModal('#openService1Modal', 'service1');
 
+    function setupModal(openBtnSelector, modalId) {
+      const openBtns = document.querySelectorAll(openBtnSelector);
+      const modal = document.getElementById(modalId);
+      if (!openBtns.length || !modal) return;
+      
       const closeBtn = modal.querySelector('.close-btn');
 
+    openBtns.forEach(openBtn => { // すべてのボタンにイベントを設定します
       openBtn.addEventListener('click', e => {
         e.preventDefault();
         modal.style.display = 'flex';
         modal.classList.add('open');
         document.body.classList.add('modal-open');
       });
+    });
+    
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.classList.add('close-animation');
 
-      function closeModal() {
-        modal.classList.remove('open');
-        modal.classList.add('close-animation');
-
-        modal.addEventListener('animationend', () => {
-          modal.style.display = 'none';
-          modal.classList.remove('close-animation');
-          document.body.classList.remove('modal-open');
-        }, {
-          once: true
-        });
-      }
-
-      closeBtn.addEventListener('click', e => {
-        e.preventDefault();
-        closeModal();
-      });
-
-      modal.addEventListener('click', e => {
-        if (e.target === modal) {
-          closeModal();
-        }
-      });
+      modal.addEventListener('animationend', () => {
+        modal.style.display = 'none';
+        modal.classList.remove('close-animation');
+        document.body.classList.remove('modal-open');
+      }, { once: true });
     }
+
+    closeBtn.addEventListener('click', e => {
+      e.preventDefault();
+      closeModal();
+    });
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+    } 
+  }
 
     // すべてのモーダルに同じ開閉ロジックを適用
     setupModal('openPlanModal', 'plan');
