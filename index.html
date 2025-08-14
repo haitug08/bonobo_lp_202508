@@ -514,72 +514,70 @@
 <!--/#container-->
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // スクロール時の固定ヘッダー・ページトップボタンの表示/非表示を制御
     const offsetTop = 350;
     const hysteresis = 50;
 
     window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
+        const scrollTop = window.scrollY;
 
-      if (scrollTop > offsetTop) {
-        document.body.classList.add('is-fixed-pagetop', 'is-fixed-head');
-      } else if (scrollTop < offsetTop - hysteresis) {
-        document.body.classList.remove('is-fixed-pagetop', 'is-fixed-head');
-      }
+        if (scrollTop > offsetTop) {
+            document.body.classList.add('is-fixed-pagetop', 'is-fixed-head');
+        } else if (scrollTop < offsetTop - hysteresis) {
+            document.body.classList.remove('is-fixed-pagetop', 'is-fixed-head');
+        }
     });
 
-    setupModal('.openPlanModalBtn', 'plan'); 
-    setupModal('#openService1Modal', 'service1');
-
+    // モーダル設定関数
     function setupModal(openBtnSelector, modalId) {
-      const openBtns = document.querySelectorAll(openBtnSelector);
-      const modal = document.getElementById(modalId);
-      if (!openBtns.length || !modal) return;
-      
-      const closeBtn = modal.querySelector('.close-btn');
+        const openBtns = document.querySelectorAll(openBtnSelector);
+        const modal = document.getElementById(modalId);
+        if (!openBtns.length || !modal) return;
 
-    openBtns.forEach(openBtn => { // すべてのボタンにイベントを設定します
-      openBtn.addEventListener('click', e => {
-        e.preventDefault();
-        modal.style.display = 'flex';
-        modal.classList.add('open');
-        document.body.classList.add('modal-open');
-      });
-    });
-    
-    function closeModal() {
-      modal.classList.remove('open');
-      modal.classList.add('close-animation');
+        const closeBtn = modal.querySelector('.close-btn');
 
-      modal.addEventListener('animationend', () => {
-        modal.style.display = 'none';
-        modal.classList.remove('close-animation');
-        document.body.classList.remove('modal-open');
-      }, { once: true });
+        openBtns.forEach(openBtn => {
+            openBtn.addEventListener('click', e => {
+                e.preventDefault();
+                modal.style.display = 'flex';
+                modal.classList.add('open');
+                document.body.classList.add('modal-open');
+            });
+        });
+
+        function closeModal() {
+            modal.classList.remove('open');
+            modal.classList.add('close-animation');
+
+            modal.addEventListener('animationend', () => {
+                modal.style.display = 'none';
+                modal.classList.remove('close-animation');
+                document.body.classList.remove('modal-open');
+            }, { once: true });
+        }
+
+        closeBtn.addEventListener('click', e => {
+            e.preventDefault();
+            closeModal();
+        });
+
+        modal.addEventListener('click', e => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
     }
 
-    closeBtn.addEventListener('click', e => {
-      e.preventDefault();
-      closeModal();
-    });
-
-    modal.addEventListener('click', e => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-    } 
-  }
-
     // すべてのモーダルに同じ開閉ロジックを適用
-    setupModal('openPlanModal', 'plan');
-    setupModal('openService1Modal', 'service1');
-    setupModal('openService2Modal', 'service2');
-    setupModal('openService3Modal', 'service3');
-    setupModal('openService4Modal', 'service4');
-    setupModal('openService5Modal', 'service5');
-  });  
+    // classセレクタを正しく修正しました
+    setupModal('.openPlanModal', 'plan'); 
+    setupModal('#openService1Modal', 'service1');
+    setupModal('#openService2Modal', 'service2');
+    setupModal('#openService3Modal', 'service3');
+    setupModal('#openService4Modal', 'service4');
+    setupModal('#openService5Modal', 'service5');
+});
 </script>  
 
     <script>
