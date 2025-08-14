@@ -623,24 +623,32 @@
 
         // ページ読み込み時に実行される処理
         window.onload = function() {
-            // クッキーから代理店番号を取得し、存在すれば設定する
+            // URLからagency_noパラメータを取得する
+            const urlParams = new URLSearchParams(window.location.search);
+            const agencyNoFromUrl = urlParams.get('agency_no');
+            
+            // クッキーから代理店番号を取得する関数
             function getCookie(name) {
                 const value = `; ${document.cookie}`;
                 const parts = value.split(`; ${name}=`);
                 if (parts.length === 2) return parts.pop().split(';').shift();
             }
-
+            const agencyNoFromCookie = getCookie("agency_no"); // クッキー名がagency_noと仮定
             const agentNumberInput = document.getElementById("agent_number");
-            const agencyNo = getCookie("agency_no"); // クッキー名がagency_noと仮定
-            if (agencyNo) {
-                agentNumberInput.value = agencyNo;
+
+            // 優先順位：URLパラメータ > クッキー > デフォルト値
+            if (agencyNoFromUrl) {
+                agentNumberInput.value = agencyNoFromUrl;
+            } else if (agencyNoFromCookie) {
+                agentNumberInput.value = agencyNoFromCookie;
+            } else {
+                // 初期値はHTMLの`value`属性に設定済みなので、ここでは何もしない
             }
             
-            // 初期値で一度情報を表示する
+            // 最終的に設定された値で情報を表示する
             handleAgentInput();
         };
-    </script>
-  
+    </script>  
 
 <!--ここまで-->
   <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
