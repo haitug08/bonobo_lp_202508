@@ -378,10 +378,9 @@
           </a>
         </div>
        </div>
-
-      <div class="swiper-pagination"></div>
-            
+      
         </div>  
+          <div class="swiper-pagination"></div>
        </div>     
       </div>
     </section>
@@ -802,16 +801,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-            new Swiper(".jirei-swiper", {
+        new Swiper(".jirei-swiper", {
           loop: true,
           slidesPerView: 1, // wrap_08を1つずつ表示
           pagination: {
             el: ".swiper-pagination",
-            clickable: true, // ●をクリックして移動可能にする
-              },
+            clickable: true, // ●クリックで切り替え可能
+          },
         });
       });
     </script>
+
 
 
       
