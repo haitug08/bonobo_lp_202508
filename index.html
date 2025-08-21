@@ -379,8 +379,7 @@
         </div>
        </div>
 
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
             
         </div>  
        </div>     
@@ -801,22 +800,19 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     </script>
 
- <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    new Swiper(".jirei-swiper", {
-      loop: true,
-      slidesPerView: 1,     // 1ページに「wrap_08」を1つ表示
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  });
-</script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+            new Swiper(".jirei-swiper", {
+          loop: true,
+          slidesPerView: 1, // wrap_08を1つずつ表示
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true, // ●をクリックして移動可能にする
+              },
+        });
+      });
+    </script>
+
 
       
 <!--ここまで-->
