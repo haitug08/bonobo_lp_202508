@@ -312,11 +312,7 @@
           <div class="swiper-slide"><img class="img_14" src="https://bonobo-documents.s3.ap-northeast-1.amazonaws.com/lp/images/img_60.png" alt=""></div>
           <div class="swiper-slide"><img class="img_14" src="https://bonobo-documents.s3.ap-northeast-1.amazonaws.com/lp/images/img_61.png" alt=""></div>
           </div>
-          
-          <div class="swiper-controls">
-            <div class="swiper-button-prev">＜</div>
-            <div class="swiper-button-next">＞</div>
-          </div>
+          <div class="swiper-pagination"></div>
       </div>
     </section>
     
@@ -736,24 +732,23 @@ document.addEventListener('DOMContentLoaded', () => {
     </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    new Swiper(".jirei-swiper", {
-      loop: true,              // 無限スクロールON
-      slidesPerView: 3,        // 横3枚
-      slidesPerGroup: 1,       // 3枚ずつまとめてスクロール
-      grid: {
-        rows: 1,               // 縦2行
-        fill: "row",           // 行方向に埋める
-      },
-      spaceBetween: 20,        // 画像間の余白
-      const swiper = new Swiper('.jirei-swiper', {
-        loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }
-    });
-  });
+document.addEventListener("DOMContentLoaded", function() {
+      new Swiper(".jirei-swiper", {    
+        loop: true, // 無限スクロールON 
+        slidesPerView: 3, // 横3枚 
+        slidesPerGroup: 1, // 3枚ずつまとめてスクロール 
+        grid: { 
+          rows: 1, // 縦2行      
+          fill: "row", // 行方向に埋める       
+        }, 
+        spaceBetween: 20, // 画像間の余白 
+        pagination: { 
+          el: ".swiper-pagination",            
+          clickable: true, 
+          dynamicBullets: true, // ドットを省略して表示（数が多いとき便利）
+        }, 
+      }); 
+});
 </script>
       
 <!--ここまで-->
