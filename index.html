@@ -1254,21 +1254,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-      new Swiper(".jirei-swiper", {    
-        loop: false, // 無限スクロールON 
-        slidesPerView: 3, // 横3枚 
-        slidesPerGroup: 1, // 3枚ずつまとめてスクロール 
-        grid: { 
-          rows: 1, // 縦2行      
-          fill: "row", // 行方向に埋める       
-        }, 
-        spaceBetween: 20, // 画像間の余白 
-        pagination: { 
-          el: ".swiper-pagination",            
-          clickable: true, 
-          dynamicBullets: true, // ドットを省略して表示（数が多いとき便利）
-        }, 
-      }); 
+    new Swiper(".jirei-swiper", {
+        loop: false,
+        slidesPerView: 3, // PCでのデフォルト
+        slidesPerGroup: 1,
+        grid: {
+            rows: 1,
+            fill: "row",
+        },
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        // ここからブレークポイントを追加
+        breakpoints: {
+            // 768px以下の画面サイズに適用する設定
+            768: {
+                slidesPerView: 1, // SPでは1枚ずつ表示
+                grid: {
+                    rows: 1, // 縦1行
+                },
+                spaceBetween: 10, // 画像間の余白を小さくする
+            }
+        }
+    });
 });
 </script>
       
