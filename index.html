@@ -1318,7 +1318,10 @@ document.addEventListener("DOMContentLoaded", function() {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-      dynamicBullets: true,
+      // renderBulletを追加して、ページネーションを数字にする
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
     },
     breakpoints: {
       // PC向け（769px以上）
