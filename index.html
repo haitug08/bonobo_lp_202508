@@ -1255,27 +1255,27 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   new Swiper(".jirei-swiper", {
-    // デフォルトの設定（SP・モバイル向け）
-    loop: false,
-    slidesPerView: 1, // SPでは1枚表示
-    spaceBetween: 10, // SPでの画像間の余白
-    slidesPerGroup: 1,
+    loop: false, // ループ不要ならfalse、必要ならtrue
+    slidesPerView: 1,        // デフォルト（SP）は1枚表示
+    spaceBetween: 10,        // SPでの画像間の余白
+    slidesPerGroup: 1,       // 1枚ずつ送る
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
       dynamicBullets: true,
     },
-    // ブレークポイントの設定
     breakpoints: {
-      // 769px以上の画面サイズ（PC）に適用
+      // PC向け（769px以上）
       769: {
-        slidesPerView: 3, // PCでは3枚表示
-        spaceBetween: 20, // PCでの画像間の余白
+        slidesPerView: 3,    // PCでは3枚表示
+        spaceBetween: 20,    // PCでの画像間の余白
+        slidesPerGroup: 3,   // 3枚ずつ送る（必要なければ削除OK）
       }
     }
   });
 });
 </script>
+
       
 <!--ここまで-->
 
