@@ -311,7 +311,11 @@
       <div class="swiper-slide"><a href="#" id="openTrouble17Modal"><img class="img_14" src="https://bonobo-documents.s3.ap-northeast-1.amazonaws.com/lp/images/img_60.png" alt=""></a></div>
       <div class="swiper-slide"><a href="#" id="openTrouble18Modal"><img class="img_14" src="https://bonobo-documents.s3.ap-northeast-1.amazonaws.com/lp/images/img_61.png" alt=""></a></div>
     </div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-controls">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </div>
 
 <div id="trouble1" class="modal">
@@ -1308,27 +1312,31 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     </script>
 
+// imdex.html の一番下にある script タグを書き換える
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   new Swiper(".jirei-swiper", {
-    loop: false, // ループ不要ならfalse、必要ならtrue
-    slidesPerView: 1,        // デフォルト（SP）は1枚表示
-    spaceBetween: 10,        // SPでの画像間の余白
-    slidesPerGroup: 1,       // 1枚ずつ送る
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    // ページネーションを「分数」タイプに設定
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
-      // renderBulletを追加して、ページネーションを数字にする
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
-      },
+      type: "fraction", 
     },
+    // ナビゲーション（矢印）を有効にする設定
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
     breakpoints: {
-      // PC向け（769px以上）
       769: {
-        slidesPerView: 3,    // PCでは3枚表示
-        spaceBetween: 20,    // PCでの画像間の余白
-        slidesPerGroup: 1,   // 3枚ずつ送る（必要なければ削除OK）
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
       }
     }
   });
