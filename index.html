@@ -1312,41 +1312,37 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     </script>
 
-// imdex.html の一番下にある script タグを書き換える
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   new Swiper(".jirei-swiper", {
     loop: false,
+    
     slidesPerView: 1,
-    spaceBetween: 10,
     slidesPerGroup: 1,
-    // ページネーションを「分数」タイプに設定
+
+    spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination",
       type: "fraction", 
     },
-    // ナビゲーション（矢印）を有効にする設定
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
 
     breakpoints: {
+      // 769px以上のPC表示の場合
       769: {
         slidesPerView: 3,
+        slidesPerGroup: 3,
         spaceBetween: 20,
-        slidesPerGroup: 1,
       }
     }
   });
 });
 </script>
 
-      
 <!--ここまで-->
-
-
   
   <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
   <div class="nav-fix-pos-head">
